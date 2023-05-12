@@ -1,0 +1,19 @@
+{
+  "title": "Army Sheet",
+  "description": "A very simple start for Kingdom and Warfare Army sheets",
+  "url": "https://github.com/k3tw13z3li/army-sheet",
+  "version": "0.0.1",
+  "scripts": [
+    "army-sheet.js"
+  ],
+  "styles": [
+    "/css/army-unit.css"
+  ],
+  "manifest": "https://raw.githubusercontent.com/k3tw13z3l/foundry/master/army-sheet/army-sheet/module.json",
+  "download": "https://github.com/k3tw13z3l/raw/master/army-sheet/army-sheet.zip",
+  "id": "army-sheet",
+  "compatibility": {
+    "minimum": "9",
+    "verified": "10.291"
+  }
+}
