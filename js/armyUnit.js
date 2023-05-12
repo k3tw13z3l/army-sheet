@@ -8,13 +8,13 @@ Hooks.on("ready", function() {
 
 class ArmySheet extends ActorSheet {
 	get template() {
-		return "modules/army-sheet/army-sheet.html";
+		return "modules/army-sheet/armyUnit.hbs";
 	}
 
 	static get defaultOptions() {
 		const options = super.defaultOptions;
 		options.classes.push('dnd5e army-sheet');
-		mergeObject(options, {width: 750, height: 500});
+		mergeObject(options, {width: 750, height: 550});
 		return options;
 	}
 }

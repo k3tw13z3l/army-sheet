@@ -14,25 +14,50 @@
         </div>
         <div class="armyUnit-name">
             <span>War Elephants</span>
+            <input type="text" data-dtype="String" name="name"
+                       value="" placeholder="UnitName">
         </div>
         <div class="armyUnit-text">
-            <div>Elite Super Heavy</div>
-            <div>Elephant Infantry</div>
+            <label>
+              <span>Elite</span>&nbsp;
+              <input type="text" data-dtype="String" name="flags.kw-warfare.unit.experience"
+                value="" placeholder="Experience">
+            </label>
+            <label>
+              <span>Super Heavy</span>
+              <input type="text" data-dtype="String" name="flags.kw-warfare.unit.equipment"
+                value="" placeholder="Equipment">
+            </label><BR>
+            <label>
+              <span>Elephant</span>&nbsp;
+              <input type="text" data-dtype="String" name="flags.kw-warfare.unit.ancestry"
+                value="" placeholder="Ancestry">
+            </label>
+            <label>
+              <span>Infantry</span>
+              <input type="text" data-dtype="String" name="flags.kw-warfare.unit.type"
+                value="" placeholder="Type">
+            </label>
         </div>
         <div class="armyUnit-hp">
-            <div>4/4</div>
+            <span class="hitpoints">4/4</span><br>
             <span>Size</span>
         </div>
         <div class="armyUnit-tokens">
           <img src="Images/unit-ancestry.png" width="50%"><img src="Images/unit-type.png" width="50%">
         </div>
         <div class="armyUnit-traitbox">
-          <li>Undead</li>
-          <li>Harrowing</li>
-          <li>M:Follow Up</li>
+          <div class=onetraitbox>
+            <div class="name">Eternal</div>
+            <div class="description">This unit has advantage on Morale tests against undead or fiend units, and on the Morale test to attack units with the Harrowing trait.</div>
+          </div>
+          <div class=onetraitbox>
+            <div class="name">Mobile</div>
+            <div class="description">This unit has advantage on the Command test when using the Follow Up maneuver, and can move back 2 spaces when using the Withdraw maneuver.</div>
+          </div>
         </div>
         <div class="armyUnit-commander">
-          <div>Commander</div>
+          <span class="commander">Commander</span><br>
           <span>Mathu'Gar</span>
         </div>
         <div class="armyUnit-stats">
