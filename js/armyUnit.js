@@ -14,7 +14,7 @@ class ArmySheet extends ActorSheet {
 	static get defaultOptions() {
 		const options = super.defaultOptions;
 		options.classes.push('dnd5e army-sheet');
-		mergeObject(options, {width: 750, height: 550});
+		mergeObject(options, {width: 750, height: 700});
 		return options;
 	}
 }
