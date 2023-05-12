@@ -4,7 +4,7 @@
   "url": "https://github.com/k3tw13z3li/army-sheet",
   "version": "0.0.1",
   "scripts": [
-    "army-sheet.js"
+    "/js/armyUnit.js"
   ],
   "styles": [
     "/css/army-unit.css"
