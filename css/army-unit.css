@@ -1,7 +1,8 @@
 .armyUnit {
-  background: #000;
+  background: black;
   padding: 17px;
-  height: 500px;
+  height: 600px;
+  max-height: 700px;
   width: 700px;
   margin: 50px auto;
   border-radius: 5px;
