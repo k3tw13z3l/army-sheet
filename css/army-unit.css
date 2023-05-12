@@ -17,6 +17,12 @@
   outline: none;
 }
 
+.armyUnit img {
+  border: 0px;
+
+
+}
+
 .armyUnit-art {
   position: relative;
   height: 490px;
