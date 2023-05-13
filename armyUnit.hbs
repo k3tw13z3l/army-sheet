@@ -1,7 +1,7 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
   <div class="armyUnit">
     <div class="armyUnit-art">
-      <img src="{{actor.img}}" alt="artwork" width="100%" height="auto" data-edit="img" />
+      <img class="armyUnit-artwork" src="{{actor.img}}" alt="artwork" data-edit="img" />
     </div>
     <div class="armyUnit-name">
       <span>{{actor.name}}</span>
@@ -9,12 +9,12 @@
     </div>
     <div class="armyUnit-text">
       <label>
-        <span>{{unit.experience}}</span>&nbsp;
+        <span> - {{unit.experience}} - </span>&nbsp;
         <input type="text" data-dtype="String" name="flags.kw-warfare.unit.experience" value="{{unit.experience}}"
           placeholder="Experience">
       </label>
       <label>
-        <span>{{unit.equipment}}</span>
+        <span> - {{unit.equipment}} - </span>
         <input type="text" data-dtype="String" name="flags.kw-warfare.unit.equipment" value="{{unit.equipment}}" placeholder="Equipment">
       </label><BR>
       <label>
@@ -31,7 +31,7 @@
       <span>Size</span>
     </div>
     <div class="armyUnit-tokens">
-      <img src="/modules/army-sheet/Images/unit-ancestry.png" width="50%"><img src="Images/unit-type.png" width="50%">
+      <img src="/modules/army-sheet/Images/unit-ancestry.png" class="armyUnitsheetimg" width="50%"><img src="/modules/army-sheet/Images/unit-type.png" class="armyUnitsheetimg" width="50%">
     </div>
     <div class="armyUnit-traitbox">
       <div class=onetraitbox>
@@ -64,7 +64,7 @@
       </div>
       <div class="armyUnit-statspacer">
         <div class="armyUnit-attack">
-          <img src="Images/attack-sword.png">
+          <img class="armyUnitsheetimg" src="/modules/army-sheet/Images/attack-sword.png">
           <div>2x</div>
         </div>
         <div class="armyUnit-dam">
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="armyUnit-movement">
-          <img src="Images/movement-arrow.png">
+          <img class="armyUnitsheetimg" src="/modules/army-sheet/Images/movement-arrow.png">
           <div>1</div>
         </div>
       </div>
