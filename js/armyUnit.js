@@ -15,15 +15,13 @@ class ArmySheet extends ActorSheet {
 
 	static get defaultOptions() {
 		const options = super.defaultOptions;
-		options.classes.push('dnd5e army-sheet');
+		options.classes.push('dnd5e actor army-sheet');
 		mergeObject(options, {
 			width: 748,
 			height: 641
 		});
 		return options;
 	}
-
-	debugger;
 
   async getData(options) {
 		const data = await super.getData(options);
@@ -55,7 +53,8 @@ class ArmySheet extends ActorSheet {
 					}
 				}
 			}
-		}
+		};
+		return data;
 	}
 
 }
