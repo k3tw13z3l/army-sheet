@@ -23,6 +23,8 @@ class ArmySheet extends ActorSheet {
 		return options;
 	}
 
+	debugger;
+
   async getData(options) {
 		const data = await super.getData(options);
 		data.isGM = game.user.isGM;
