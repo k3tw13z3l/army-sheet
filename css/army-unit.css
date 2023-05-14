@@ -1,3 +1,9 @@
+@font-face {
+        font-family: Roboto;
+        font-style: normal;
+        src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+}
+
 .armyUnit {
   background: black;
   padding: 17px;
