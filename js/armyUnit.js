@@ -26,8 +26,9 @@ class ArmySheet extends ActorSheet {
   async getData(options) {
 		const data = await super.getData(options);
 		data.isGM = game.user.isGM;
-		if (!data.actor.flags[mName]) {
-			data.actor.flags[mName].unit = {
+		// if (!data.actor.flags[mName]) {
+		// data.actor.flags[mName].unit = {
+		const DEFAULT_UNIT_DATA = {
 				'type': "[type]",
 				'ancestry': "[ancestry]",
 				'equipment': "[equipment]",
@@ -64,9 +65,9 @@ class ArmySheet extends ActorSheet {
 					}
 				}
 			}
-		}
+		// }
 
-		data.unit = duplicate(this.actor.getFlag(mName, 'unit'));
+		data.unit = duplicate(this.actor.getFlag(mName, 'unit') || DEFAULT_UNIT_DATA);
 		data.unit.traits = [];
 		for (const item of data.items) {
 			data.unit.traits.push({
