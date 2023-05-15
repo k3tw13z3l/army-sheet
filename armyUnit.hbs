@@ -9,25 +9,25 @@
     </div>
     <div class="armyUnit-text">
       <label>
-        <span> - {{unit.experience}} - </span>&nbsp;
-        <input type="text" data-dtype="String" name="flags.kw-warfare.unit.experience" value="{{unit.experience}}"
+        <span> - {{experience}} - </span>&nbsp;
+        <input type="text" data-dtype="String" name="flags.armySheet.experience" value="{{unit.experience}}"
           placeholder="Experience">
       </label>
       <label>
-        <span> - {{unit.equipment}} - </span>
-        <input type="text" data-dtype="String" name="flags.kw-warfare.unit.equipment" value="{{unit.equipment}}" placeholder="Equipment">
+        <span> - {{equipment}} - </span>
+        <input type="text" data-dtype="String" name="flags.armySheet.equipment" value="{{unit.equipment}}" placeholder="Equipment">
       </label><BR>
       <label>
         <span>Elephant</span>&nbsp;
-        <input type="text" data-dtype="String" name="flags.kw-warfare.unit.ancestry" value="" placeholder="Ancestry">
+        <input type="text" data-dtype="String" name="flags.armySheet.ancestry" value="" placeholder="Ancestry">
       </label>
       <label>
-        <span>Infantry</span>
-        <input type="text" data-dtype="String" name="flags.kw-warfare.unit.type" value="" placeholder="Type">
+        <span> - {{type}} - </span>
+        <input type="text" data-dtype="String" name="flags.armySheet.type" value="" placeholder="Type">
       </label>
     </div>
     <div class="armyUnit-hp">
-      <span class="hitpoints">4/4</span><br>
+      <span class="hitpoints">{{actor.attributes.hp.value}}/{{actor.attributes.hp.max}}</span><br>
       <span>Size</span>
     </div>
     <div class="armyUnit-tokens">

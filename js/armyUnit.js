@@ -28,10 +28,17 @@ class ArmySheet extends ActorSheet {
 		data.isGM = game.user.isGM;
 		if (!data.actor.flags[mName]) {
 			data.actor.flags[mName] = {
-				'type': null,
-				'ancestry': null,
-				'equipment': null,
-				'experience': null,
+				'type': "[type]",
+				'ancestry': "[ancestry]",
+				'equipment': "[equipment]",
+				'experience': "[experience]",
+				'commander': "[commander]",
+				'tier': "I",
+				'damage': "1",
+				'numberOfAtk': 1,
+				'special': {
+					diminishable: 1
+				},
 				'stats' : {
 					'attack': {
 						value: null,
@@ -45,11 +52,15 @@ class ArmySheet extends ActorSheet {
 						advantage: 0,
 						disadvantage: 0
 					},
-					'morale': {
+					'power': {
 						value: null,
 						bonus: 0,
 						advantage: 0,
 						disadvantage: 0
+					},
+					'morale': {
+						value: null,
+						bonus: 0,
 					}
 				}
 			}
