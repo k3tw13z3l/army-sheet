@@ -40,6 +40,7 @@ class ArmySheet extends ActorSheet {
 					'special': {
 						diminishable: 1
 					},
+					'traits': [],
 					'stats' : {
 						'attack': {
 							value: null,
@@ -68,7 +69,6 @@ class ArmySheet extends ActorSheet {
 			}
 		}
   	data.army = data.actor.flags[mName].unit;
-		data.army.traits = [];
 
 	  for (const item of data.items) {
 			data.army.traits.push({
