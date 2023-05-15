@@ -71,7 +71,7 @@ class ArmySheet extends ActorSheet {
 
 		data.isGM = game.user.isGM;
 		// if (!data.actor.flags[mName]) {
-		data.army = duplicate(this.actor.getFlag('armySheet', 'army') || DEFAULT_UNIT_DATA);
+		data.army = DEFAULT_UNIT_DATA;
 
 	  for (const item of data.items) {
 			data.army.traits.push({
