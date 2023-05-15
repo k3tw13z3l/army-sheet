@@ -9,25 +9,25 @@
     </div>
     <div class="armyUnit-text">
       <label>
-        <span> - {{army.experience}} - </span>&nbsp;
-        <input type="text" data-dtype="String" name="flags.armySheet.unit.experience" value="{{unit.experience}}"
+        <span>{{army.experience}}</span>&nbsp;
+        <input type="text" data-dtype="String" name="flags.armySheet.army.experience" value="{{army.experience}}"
           placeholder="Experience">
       </label>
       <label>
-        <span> - {{equipment}} - </span>
-        <input type="text" data-dtype="String" name="flags.armySheet.unit.equipment" value="{{unit.equipment}}" placeholder="Equipment">
+        <span>{{army.equipment}}</span>
+        <input type="text" data-dtype="String" name="flags.armySheet.army.equipment" value="{{army.equipment}}" placeholder="Equipment">
       </label><BR>
       <label>
-        <span>Elephant</span>&nbsp;
-        <input type="text" data-dtype="String" name="flags.armySheet.unit.ancestry" value="" placeholder="Ancestry">
+        <span>{{army.ancestry}}</span>&nbsp;
+        <input type="text" data-dtype="String" name="flags.armySheet.army.ancestry" value="{{army.ancestry}}" placeholder="Ancestry">
       </label>
       <label>
-        <span> - {{type}} - </span>
-        <input type="text" data-dtype="String" name="flags.armySheet.unit.type" value="" placeholder="Type">
+        <span>{{army.type}}</span>
+        <input type="text" data-dtype="String" name="flags.armySheet.army.type" value="{{army.type}}" placeholder="Type">
       </label>
     </div>
     <div class="armyUnit-hp">
-      <span class="hitpoints">{{actor.system.attributes.hp.value}}/{{actor.attributes.hp.max}}</span><br>
+      <span class="hitpoints">{{actor.system.attributes.hp.value}}/{{actor.system.attributes.hp.max}}</span><br>
       <span>Size</span>
     </div>
     <div class="armyUnit-tokens">
