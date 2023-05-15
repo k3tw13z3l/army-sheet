@@ -30,51 +30,51 @@ class ArmySheet extends ActorSheet {
 		const data = await super.getData(options);
 		data.isGM = game.user.isGM;
 		if (!data.actor.flags[mName]) {
-		data.actor.flags[mName].unit = {
-			'unit': {
-				'type': "[type]",
-				'ancestry': "[ancestry]",
-				'equipment': "[equipment]",
-				'experience': "[experience]",
-				'commander': "[commander]",
-				'tier': "I",
-				'damage': "1",
-				'numberOfAtk': 1,
-				'special': {
-					diminishable: 1
-				},
-				'stats' : {
-					'attack': {
-						value: null,
-						bonus: 0,
-						advantage: 0,
-						disadvantage: 0
+	  	data.actor.flags[mName].unit = {
+		  	'unit': {
+			  	'type': "[type]",
+				  'ancestry': "[ancestry]",
+			  	'equipment': "[equipment]",
+		  		'experience': "[experience]",
+			  	'commander': "[commander]",
+			   	'tier': "I",
+				 	'damage': "1",
+					'numberOfAtk': 1,
+					'special': {
+						diminishable: 1
 					},
-					'defense': {
-						value: null,
-						bonus: 0,
-						advantage: 0,
-						disadvantage: 0
-					},
-					'power': {
-						value: null,
-						bonus: 0,
-						advantage: 0,
-						disadvantage: 0
-					},
-					'morale': {
-						value: null,
-						bonus: 0,
+					'stats' : {
+						'attack': {
+							value: null,
+							bonus: 0,
+							advantage: 0,
+							disadvantage: 0
+						},
+						'defense': {
+							value: null,
+							bonus: 0,
+							advantage: 0,
+							disadvantage: 0
+						},
+						'power': {
+							value: null,
+							bonus: 0,
+							advantage: 0,
+							disadvantage: 0
+						},
+						'morale': {
+							value: null,
+							bonus: 0,
+						}
 					}
 				}
 			}
 		}
-	}
+  	data.army = data.actor.flags[mName].unit;
+		data.army.traits = [];
 
-	data.unit.traits = [];
-
-	for (const item of data.items) {
-		data.unit.traits.push({
+	  for (const item of data.items) {
+			data.army.traits.push({
 				id: item._id,
 				name: item.name,
 				activation: item.data?.activation?.type ||'none',
@@ -83,13 +83,14 @@ class ArmySheet extends ActorSheet {
 					enriched: TextEditor.enrichHTML(item.data?.description?.value, {
 						secrets: data.owner,
 						entities: true,
-						links: true,
+							links: true,
 						rolls: true,
 						rollData: this.actor.getRollData()
 					})
 				}
 			});
 		}
+
 		return data;
 	}
 
