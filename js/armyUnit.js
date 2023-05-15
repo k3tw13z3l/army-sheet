@@ -102,7 +102,7 @@ Actors.registerSheet("dnd5e", ArmySheet, {
 });
 
 
-export function setArmySheetDefaults(actor) {
+function setArmySheetDefaults(actor) {
 	const existingArmySheetValues = actor.getFlag('armySheet', 'army') || {};
 	const mergedArmySheetValues = mergeObject(existingArmySheetValues, DEFAULT_UNIT_DATA);
 
