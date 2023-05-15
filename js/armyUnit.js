@@ -3,9 +3,6 @@ const ArmySheet_Version = "0.0.1";
 const ArmySheet_LastUpdated = 1652226769; //Date.now().toString().substr(0, 10);
 const mName="armySheet"
 
-export const DEFAULT_UNIT_DATA = {
-
-
 Hooks.on("ready", function() {
   console.log("-=> Army Sheet v" + ArmySheet_Version + " <=- [" + (new Date(ArmySheet_LastUpdated * 1000)) + "]");
 });
