@@ -70,7 +70,7 @@ class ArmySheet extends ActorSheet {
 		}
 
 	  for (const item of data.items) {
-			data.ctor.flags[mName].army.traits.push({
+			data.actor.flags[mName].army.traits.push({
 				id: item._id,
 				name: item.name,
 				activation: item.data?.activation?.type ||'none',
