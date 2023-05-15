@@ -28,7 +28,7 @@ class ArmySheet extends ActorSheet {
 		data.isGM = game.user.isGM;
 		if (!data.actor.flags[mName]) {
 	  	data.actor.flags[mName] = {
-		  	'unit': {
+		  	'army': {
 			  	'type': "[type]",
 				  'ancestry': "[ancestry]",
 			  	'equipment': "[equipment]",
@@ -68,10 +68,9 @@ class ArmySheet extends ActorSheet {
 				}
 			}
 		}
-  	data.army = data.actor.flags[mName].unit;
 
 	  for (const item of data.items) {
-			data.army.traits.push({
+			data.ctor.flags[mName].army.traits.push({
 				id: item._id,
 				name: item.name,
 				activation: item.data?.activation?.type ||'none',
