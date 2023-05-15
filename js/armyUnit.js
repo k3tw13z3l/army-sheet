@@ -3,6 +3,9 @@ const ArmySheet_Version = "0.0.1";
 const ArmySheet_LastUpdated = 1652226769; //Date.now().toString().substr(0, 10);
 const mName="armySheet"
 
+export const DEFAULT_UNIT_DATA = {
+
+
 Hooks.on("ready", function() {
   console.log("-=> Army Sheet v" + ArmySheet_Version + " <=- [" + (new Date(ArmySheet_LastUpdated * 1000)) + "]");
 });
@@ -26,9 +29,9 @@ class ArmySheet extends ActorSheet {
   async getData(options) {
 		const data = await super.getData(options);
 		data.isGM = game.user.isGM;
-		// if (!data.actor.flags[mName]) {
-		// data.actor.flags[mName].unit = {
-		const DEFAULT_UNIT_DATA = {
+		if (!data.actor.flags[mName]) {
+		data.actor.flags[mName].unit = {
+			'unit': {
 				'type': "[type]",
 				'ancestry': "[ancestry]",
 				'equipment': "[equipment]",
@@ -65,12 +68,13 @@ class ArmySheet extends ActorSheet {
 					}
 				}
 			}
-		// }
+		}
+	}
 
-		data.unit = duplicate(this.actor.getFlag(mName, 'unit') || DEFAULT_UNIT_DATA);
-		data.unit.traits = [];
-		for (const item of data.items) {
-			data.unit.traits.push({
+	data.unit.traits = [];
+
+	for (const item of data.items) {
+		data.unit.traits.push({
 				id: item._id,
 				name: item.name,
 				activation: item.data?.activation?.type ||'none',
