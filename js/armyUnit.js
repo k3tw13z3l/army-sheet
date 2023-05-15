@@ -27,7 +27,7 @@ class ArmySheet extends ActorSheet {
 		const data = await super.getData(options);
 		data.isGM = game.user.isGM;
 		if (!data.actor.flags[mName]) {
-	  	data.actor.flags[mName].unit = {
+	  	data.actor.flags[mName] = {
 		  	'unit': {
 			  	'type': "[type]",
 				  'ancestry': "[ancestry]",
