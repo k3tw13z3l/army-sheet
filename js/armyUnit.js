@@ -27,7 +27,7 @@ class ArmySheet extends ActorSheet {
 		const data = await super.getData(options);
 		data.isGM = game.user.isGM;
 		if (!data.actor.flags[mName]) {
-			data.actor.flags[mName] = {
+			data.actor.flags[mName].unit = {
 				'type': "[type]",
 				'ancestry': "[ancestry]",
 				'equipment': "[equipment]",
@@ -64,7 +64,27 @@ class ArmySheet extends ActorSheet {
 					}
 				}
 			}
-		};
+		}
+
+		data.unit = duplicate(this.actor.getFlag('mName', 'unit'));
+		data.unit.traits = [];
+		for (const item of data.items) {
+			data.unit.traits.push({
+				id: item._id,
+				name: item.name,
+				activation: item.data?.activation?.type ||'none',
+				description: {
+					expanded: this._traitIsExpanded(item),
+					enriched: TextEditor.enrichHTML(item.data?.description?.value, {
+						secrets: data.owner,
+						entities: true,
+						links: true,
+						rolls: true,
+						rollData: this.actor.getRollData()
+					})
+				}
+			});
+		}
 		return data;
 	}
 
