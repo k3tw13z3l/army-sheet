@@ -66,7 +66,7 @@ class ArmySheet extends ActorSheet {
 			}
 		}
 
-		data.unit = duplicate(this.actor.getFlag('mName', 'unit'));
+		data.unit = duplicate(this.actor.getFlag(mName, 'unit'));
 		data.unit.traits = [];
 		for (const item of data.items) {
 			data.unit.traits.push({
