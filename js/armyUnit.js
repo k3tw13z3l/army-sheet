@@ -3,7 +3,7 @@ const ArmySheet_Version = "0.0.0";
 const mName="armySheet";
 
 
-class ArmySheet extends ActorSheet5eNpc {
+class ArmySheet extends ActorSheet5eNPC {
 	get template() {
 		/* Maybe add a limited sheet, with just some fluff 'history' text...*/
 		return "modules/army-sheet/armyUnit.hbs";
