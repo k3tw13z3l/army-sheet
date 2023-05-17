@@ -1,15 +1,7 @@
 const ArmySheet_Author = "k3tw13z3l";
-const ArmySheet_Version = "0.0.1";
-const ArmySheet_LastUpdated = 1652226769; //Date.now().toString().substr(0, 10);
+const ArmySheet_Version = "0.0.0";
 const mName="armySheet";
 
-Hooks.on("ready", function() {
-  console.log("-=> Army Sheet v" + ArmySheet_Version + " <=- [" + (new Date(ArmySheet_LastUpdated * 1000)) + "]");
-});
-
-Hooks.on('preUpdateActor', (actor, updatedFlags) => {
-	setArmySheetDefaults(actor)
-});
 
 class ArmySheet extends ActorSheet5eNpc {
 	get template() {
@@ -98,14 +90,10 @@ class ArmySheet extends ActorSheet5eNpc {
 }
 
 Actors.registerSheet("dnd5e", ArmySheet, {
-	types: ["character"],
-	makeDefault: false
+	types: ["npc"],
+	makeDefault: true
 });
 
-
-function setArmySheetDefaults(actor) {
-	const existingArmySheetValues = this.actor.getFlag('armySheet', 'army') || {};
-	const mergedArmySheetValues = mergeObject(existingArmySheetValues, DEFAULT_UNIT_DATA);
-
-	this.actor.setFlag('armySheet', 'army', mergedArmySheetValues);
-}
+Hooks.on("ready", function() {
+  console.log("-=> Army Sheet v" + ArmySheet_Version + " <=-");
+});
