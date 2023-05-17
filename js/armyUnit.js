@@ -11,7 +11,7 @@ Hooks.on('preUpdateActor', (actor, updatedFlags) => {
 	setArmySheetDefaults(actor)
 });
 
-class ArmySheet extends ActorSheet {
+class ArmySheet extends ActorSheet5eNpc {
 	get template() {
 		/* Maybe add a limited sheet, with just some fluff 'history' text...*/
 		return "modules/army-sheet/armyUnit.hbs";
@@ -29,8 +29,9 @@ class ArmySheet extends ActorSheet {
 
   async getData(options) {
 		const data = await super.getData(options);
+
 		data.isGM = game.user.isGM;
-		if (!data.actor.flags[mName]) {
+		if (!data.actor.flags[mName]?.army) {
 	  	data.actor.flags[mName] = {
 		  	'army': {
 			  	'type': "[type]",
@@ -74,7 +75,7 @@ class ArmySheet extends ActorSheet {
 		}
 
 	  for (const item of data.items) {
-			data.actor.flags[mName].army.traits.push({
+			data.actor.flags[mName]?.army?.traits.push({
 				id: item._id,
 				name: item.name,
 				activation: item.data?.activation?.type ||'none',
