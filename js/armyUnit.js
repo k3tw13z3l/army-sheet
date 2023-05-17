@@ -2,8 +2,8 @@ const ArmySheet_Author = "k3tw13z3l";
 const ArmySheet_Version = "0.0.0";
 const mName="armySheet";
 
+class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
-class ArmySheet extends ActorSheet5eNPC {
 	get template() {
 		/* Maybe add a limited sheet, with just some fluff 'history' text...*/
 		return "modules/army-sheet/armyUnit.hbs";
@@ -11,7 +11,7 @@ class ArmySheet extends ActorSheet5eNPC {
 
 	static get defaultOptions() {
 		const options = super.defaultOptions;
-		options.classes.push('dnd5e actor army-sheet');
+		options.classes.push('dnd5e actor npc army-sheet');
 		mergeObject(options, {
 			width: 748,
 			height: 641
@@ -35,7 +35,7 @@ class ArmySheet extends ActorSheet5eNPC {
 				 	'damage': "1",
 					'numberOfAtk': 1,
 					'special': {
-						diminishable: 1
+						'diminishable': 1
 					},
 					'traits': [],
 					'stats' : {
