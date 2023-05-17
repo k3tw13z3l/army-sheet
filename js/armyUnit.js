@@ -87,6 +87,11 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		return data;
 	}
 
+	_traitIsExpanded(trait) {
+		return !!trait.flags[mName]?.army_trait_expanded?.[game.user.id] ||
+						!!game.user.getFlag(mName, `army_trait_expanded.${trait._id}`);
+}
+
 }
 
 Actors.registerSheet("dnd5e", ArmySheet, {
