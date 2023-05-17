@@ -169,12 +169,12 @@
   top: 0;
 }
 
-.onetraitbox .name {
+.onetraitbox .traitname {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
   font: 500 22px 'Roboto', sans-serif;
 }
 
-.onetraitbox .description {
+.onetraitbox .trait-description {
   font: 300 12px 'Roboto', sans-serif;
   display: none;
 }

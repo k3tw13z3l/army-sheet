@@ -34,16 +34,16 @@
       <img src="/modules/army-sheet/Images/{{data.army.ancestry}}.png" class="armyUnitsheetimg armyUnit-token" width="50%"><img src="/modules/army-sheet/Images/{{data.army.type}}.png" class="armyUnitsheetimg  armyUnit-token" width="50%">
     </div>
     <div class="armyUnit-traitbox">
-      <div class=onetraitbox>
-        <div class="name">Eternal</div>
-        <div class="description">This unit has advantage on Morale tests against undead or fiend units, and on the
-          Morale test to attack units with the Harrowing trait.</div>
-      </div>
-      <div class=onetraitbox>
-        <div class="name">Mobile</div>
-        <div class="description">This unit has advantage on the Command test when using the Follow Up maneuver, and can
-          move back 2 spaces when using the Withdraw maneuver.</div>
-      </div>
+      {{#if army.traits.length}}
+        {{#each army.traits}}
+          <div class="onetraitbox" data-item-id="{{id}}">
+            <div class="traitname">{{name}}</div>
+            <div class="trait-description {{#if description.expanded}}-expanded{{#/if}}">
+              <span class="trait-description">{{{description.enrichedd}}}</span>
+            </div>
+          </div>
+        {{/each}}
+      {{#/if}}
     </div>
     <div class="armyUnit-commander">
       <span class="commander">Commander</span><br>
