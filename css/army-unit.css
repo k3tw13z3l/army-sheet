@@ -128,7 +128,7 @@
 
 .armyUnit-hp span.hitpoints {
   color: #000;
-  font: 900 40px 'Roboto', sans-serif;
+  font: 900 30px 'Roboto Condensed', sans-serif;
 }
 
 .armyUnit-tokens {
