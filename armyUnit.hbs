@@ -38,8 +38,8 @@
         {{#each army.traits}}
           <div class="onetraitbox" data-item-id="{{id}}">
             <div class="traitname">{{name}}</div>
-            <div class="trait-description {{#if description.expanded}}-expanded{{#/if}}">
-              <span class="trait-description">{{{description.enrichedd}}}</span>
+            <div class="trait-description {{#if description.expanded}}army-trait-expanded{{#/if}}">
+              <span class="trait-description">{{{description.enriched}}}</span>
             </div>
           </div>
         {{/each}}
