@@ -1,4 +1,4 @@
-# army-sheet
+# army-sheet - still WIP
 
 Kingdom & Warfare from MCDM armysheet to be used in foundryvtt
 
