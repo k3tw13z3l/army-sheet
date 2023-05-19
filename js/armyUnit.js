@@ -3,44 +3,46 @@ const ArmySheet_Version = "0.0.0";
 const mName="armySheet";
 
 const DEFAULT_UNIT_DATA = {
-	type: "infantry",
-	ancestry: "undead",
-	equipment: "light",
-	experience: "regular",
-	commander: "Mathu'Gar",
-	tier: "I",
-	damage: 1,
-	numberOfAtk: 1,
-	special: {
-		diminishable: 1
-	},
-	traits: [],
-	stats: {
-		attack: {
-			value: null,
-			bonus: 0,
-			advantage: 0,
-			disadvantage: 0
+	army: {
+		type: "infantry",
+		ancestry: "undead",
+		equipment: "light",
+		experience: "regular",
+		commander: "Mathu'Gar",
+		tier: "I",
+		damage: 1,
+		numberOfAtk: 1,
+		special: {
+			diminishable: 1
 		},
-		defense: {
-			value: null,
-			bonus: 0,
-			advantage: 0,
-			disadvantage: 0
-		},
-		power: {
-			value: null,
-			bonus: 0,
-			advantage: 0,
-			disadvantage: 0
-		},
-		toughness: {
-      value: null,
-			bonus: 0
-		},
-		morale: {
-			value: null,
-			bonus: 0,
+		traits: [],
+		stats: {
+			attack: {
+				value: null,
+				bonus: 0,
+				advantage: 0,
+				disadvantage: 0
+			},
+			defense: {
+				value: null,
+				bonus: 0,
+				advantage: 0,
+				disadvantage: 0
+			},
+			power: {
+				value: null,
+				bonus: 0,
+				advantage: 0,
+				disadvantage: 0
+			},
+			toughness: {
+				value: null,
+				bonus: 0
+			},
+			morale: {
+				value: null,
+				bonus: 0,
+			}
 		}
 	}
 };
@@ -71,7 +73,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		// if (!mycontext.actor.flags[mName]?.army) {
 	  // 	mycontext.actor.flags[mName] = {
     if (!mycontext.actor.flags[mName]) {
-		  mycontext.actor.flags[mName].army = DEFAULT_UNIT_DATA;
+		  mycontext.actor.flags[mName] = DEFAULT_UNIT_DATA;
 		}
 
 	  for (const item of mycontext.items) {
