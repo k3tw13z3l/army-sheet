@@ -27,47 +27,47 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		mycontext.isGM = game.user.isGM;
 		// if (!mycontext.actor.flags[mName]?.army) {
 	  // 	mycontext.actor.flags[mName] = {
-			mycontext.unit = duplicate(this.actor.)
-		  	'army': {
-			  	'type': "infantry",
-				  'ancestry': "undead",
-			  	'equipment': "light",
-		  		'experience': "regular",
-			  	'commander': "Mathu'Gar",
-			   	'tier': "I",
-				 	'damage': "1",
-					'numberOfAtk': 1,
-					'special': {
-						'diminishable': 1
+		mycontext.army = duplicate(this.actor.getFlag('armySheet', 'army') ||
+		{
+			'army': {
+				'type': "infantry",
+				'ancestry': "undead",
+				'equipment': "light",
+				'experience': "regular",
+				'commander': "Mathu'Gar",
+				'tier': "I",
+				'damage': "1",
+				'numberOfAtk': 1,
+				'special': {
+					'diminishable': 1
+				},
+				'traits': [],
+				'stats' : {
+					'attack': {
+						value: null,
+						bonus: 0,
+						advantage: 0,
+						disadvantage: 0
 					},
-					'traits': [],
-					'stats' : {
-						'attack': {
-							value: null,
-							bonus: 0,
-							advantage: 0,
-							disadvantage: 0
-						},
-						'defense': {
-							value: null,
-							bonus: 0,
-							advantage: 0,
-							disadvantage: 0
-						},
-						'power': {
-							value: null,
-							bonus: 0,
-							advantage: 0,
-							disadvantage: 0
-						},
-						'morale': {
-							value: null,
-							bonus: 0,
-						}
+					'defense': {
+						value: null,
+						bonus: 0,
+						advantage: 0,
+						disadvantage: 0
+					},
+					'power': {
+						value: null,
+						bonus: 0,
+						advantage: 0,
+						disadvantage: 0
+					},
+					'morale': {
+						value: null,
+						bonus: 0,
 					}
 				}
 			}
-		}
+	  })
 
 	  for (const item of mycontext.items) {
 			mycontext.actor.flags[mName]?.army?.traits.push({
@@ -93,7 +93,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 	_traitIsExpanded(trait) {
 		return !!trait.flags['armySheet']?.army_trait_expanded?.[game.user.id] ||
 						!!game.user.getFlag('armySheet', `army_trait_expanded.${trait._id}`);
-}
+  }
 
 	async _onTraitNameClicked(evt) {
 					const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
