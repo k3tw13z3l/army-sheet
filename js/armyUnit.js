@@ -89,10 +89,13 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 					continue;
 				} else if (requirements === "Experience") {
 					mycontext.army.experiments = item.name;
+					continue
 				} else if (requirements === "Type") {
 					mycontext.army.type = item.name;
+					continue;
 				} else if (requirements === "Equipment") {
 					mycontext.army.equipment = item.name;
+					continue;
 				}
 			}
 			console.log("mycontent item: ", item);
