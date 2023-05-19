@@ -8,11 +8,17 @@
       <input type="text" data-dtype="String" name="name" value="{{actor.name}}" placeholder="UnitName">
     </div>
     <div class="armyUnit-text">
-      <label>
         <span>{{actor.flags.armySheet.army.experience}}</span>&nbsp;
-        <input type="text" data-dtype="String" name="actor.flags.armySheet.army.experience" value="{{actor.flags.armySheet.army.experience}}"
+        <input type="text" data-dtype="String" name="flags.armySheet.army.experience" value="{{actor.flags.armySheet.army.experience}}"
           placeholder="Experience">
-      </label>
+        <select class="armyExperience" name="flags.armySheet.army.experience">
+           {{#select actor.flags.armySheet.army.experience }}
+           <option value="levy">Levy</option>
+           <option value="regular">Regular</option>
+           <option value="veteran">Veteran</option>
+           <option value="elite">Elite</option>
+           {{/select}}
+        </select>
       <label>
         <span>{{actor.flags.armySheet.army.equipment}}</span>
         <input type="text" data-dtype="String" name="flags.armySheet.army.equipment" value="{{army.equipment}}" placeholder="Equipment">
