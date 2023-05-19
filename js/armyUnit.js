@@ -66,7 +66,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			}
 		}
 
-	  for (const item of data.items) {
+	  for (const item of context.items) {
 			context.actor.flags[mName]?.army?.traits.push({
 				id: item._id,
 				name: item.name,
