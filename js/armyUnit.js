@@ -26,11 +26,11 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		if (!data.actor.flags[mName]?.army) {
 	  	data.actor.flags[mName] = {
 		  	'army': {
-			  	'type': "[type]",
-				  'ancestry': "[ancestry]",
-			  	'equipment': "[equipment]",
-		  		'experience': "[experience]",
-			  	'commander': "[commander]",
+			  	'type': "infantry",
+				  'ancestry': "undead",
+			  	'equipment': "light",
+		  		'experience': "regular",
+			  	'commander': "Mathu'Gar",
 			   	'tier': "I",
 				 	'damage': "1",
 					'numberOfAtk': 1,
