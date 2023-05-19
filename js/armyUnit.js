@@ -25,8 +25,9 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		mycontext.items = Array.from(this.actor.items);
 
 		mycontext.isGM = game.user.isGM;
-		if (!mycontext.actor.flags[mName]?.army) {
-	  	mycontext.actor.flags[mName] = {
+		// if (!mycontext.actor.flags[mName]?.army) {
+	  // 	mycontext.actor.flags[mName] = {
+			mycontext.unit = duplicate(this.actor.)
 		  	'army': {
 			  	'type': "infantry",
 				  'ancestry': "undead",
