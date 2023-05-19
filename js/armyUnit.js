@@ -93,7 +93,8 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 				}
 			});
 		}
-    console.log(mycontext)
+    console.log("mycontext: ", mycontext)
+
 		return mycontext;
 	}
 
