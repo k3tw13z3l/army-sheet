@@ -84,7 +84,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			});
 		}
 
-		return data;
+		return context;
 	}
 
 	_traitIsExpanded(trait) {
