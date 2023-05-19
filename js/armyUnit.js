@@ -77,10 +77,23 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		}
 
 	  for (const item of mycontext.items) {
-			mycontext.actor.flags[mName]?.army?.traits.push({
+			const requirements = item.data.requirements;
+			if (requirements) {
+				if (requirements === "Ancestry") {
+					mycontext.army.ancestry = item.name;
+					continue;
+				} else if (requirements === "Experience") {
+					mycontext.army.experiments = item.name;
+				} else if (requirements === "Type") {
+					mycontext.army.type = item.name;
+				} else if (requirements === "Equipment") {
+					mycontext.army.equipment = item.name;
+				}
+			}
+			mycontext.army.traits.push({
 				id: item._id,
 				name: item.name,
-				activation: item.data?.activation?.type ||'none',
+				activation: item.data?.activation?.type || 'none',
 				description: {
 					expanded: this._traitIsExpanded(item),
 					enriched: TextEditor.enrichHTML(item.data?.description?.value, {
