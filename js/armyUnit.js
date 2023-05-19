@@ -77,7 +77,9 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		}
     console.log("mycontext 1: ", mycontext.actor.flags[mName].army);
 		mycontext.army = mycontext.actor.flags[mName].army;
-		console.log("mycontext 1: ", mycontext.army);
+		console.log("mycontext 2: ", mycontext.army);
+
+    mycontext.army.traits = [];
 
 		for (const item of mycontext.items) {
 			const requirements = item.system.requirements;
