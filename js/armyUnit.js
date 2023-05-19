@@ -70,7 +70,9 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		mycontext.isGM = game.user.isGM;
 		// if (!mycontext.actor.flags[mName]?.army) {
 	  // 	mycontext.actor.flags[mName] = {
-		mycontext.army = duplicate(this.actor.flags[mName].army || DEFAULT_UNIT_DATA);
+    if (!mycontext.actor.flags[mName]) {
+		  mycontext.actor.flags[mName].army = DEFAULT_UNIT_DATA;
+		}
 
 	  for (const item of mycontext.items) {
 			mycontext.actor.flags[mName]?.army?.traits.push({
