@@ -9,20 +9,20 @@
     </div>
     <div class="armyUnit-text">
       <label>
-        <span class="editable">{{data.army.experience}}</span>&nbsp;
+        <span class="editable">{{army.experience}}</span>&nbsp;
         <input type="text" data-dtype="String" name="flags.armySheet.army.experience" value="{{army.experience}}"
           placeholder="Experience">
       </label>
       <label>
-        <span class="editable">{{data.army.equipment}}</span>
+        <span class="editable">{{army.equipment}}</span>
         <input type="text" data-dtype="String" name="flags.armySheet.army.equipment" value="{{army.equipment}}" placeholder="Equipment">
       </label><BR>
       <label>
-        <span class="editable">{{data.army.ancestry}}</span>&nbsp;
+        <span class="editable">{{army.ancestry}}</span>&nbsp;
         <input type="text" data-dtype="String" name="flags.armySheet.army.ancestry" value="{{army.ancestry}}" placeholder="Ancestry">
       </label>
       <label>
-        <span class="editable">{{data.army.type}}</span>
+        <span class="editable">{{army.type}}</span>
         <input type="text" data-dtype="String" name="flags.armySheet.army.type" value="{{army.type}}" placeholder="Type">
       </label>
     </div>
@@ -31,7 +31,7 @@
       <span>Size d{{actor.system.attributes.hp.max}}</span>
     </div>
     <div class="armyUnit-tokens">
-      <img src="/modules/army-sheet/Images/{{data.army.ancestry}}.png" class="armyUnitsheetimg armyUnit-token" width="50%"><img src="/modules/army-sheet/Images/{{data.army.type}}.png" class="armyUnitsheetimg  armyUnit-token" width="50%">
+      <img src="/modules/army-sheet/Images/{{army.ancestry}}.png" class="armyUnitsheetimg armyUnit-token" width="50%"><img src="/modules/army-sheet/Images/{{army.type}}.png" class="armyUnitsheetimg  armyUnit-token" width="50%">
     </div>
     <div class="armyUnit-traitbox">
       {{#if army.traits.length}}
@@ -47,7 +47,7 @@
     </div>
     <div class="armyUnit-commander">
       <span class="commander">Commander</span><br>
-      <span>'{{data.army.unit.commander}}'</span>
+      <span>'{{army.unit.commander}}'</span>
     </div>
     <div class="armyUnit-stats">
       <div class="armyUnit-statblock">

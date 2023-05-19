@@ -20,11 +20,11 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 	}
 
   async getData(options) {
-		const data = await super.getData(options);
+		const context = await super.getData(options);
 
-		data.isGM = game.user.isGM;
-		if (!data.actor.flags[mName]?.army) {
-	  	data.actor.flags[mName] = {
+		context.isGM = game.user.isGM;
+		if (!context.actor.flags[mName]?.army) {
+	  	context.actor.flags[mName] = {
 		  	'army': {
 			  	'type': "infantry",
 				  'ancestry': "undead",
@@ -67,7 +67,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		}
 
 	  for (const item of data.items) {
-			data.actor.flags[mName]?.army?.traits.push({
+			context.actor.flags[mName]?.army?.traits.push({
 				id: item._id,
 				name: item.name,
 				activation: item.data?.activation?.type ||'none',
