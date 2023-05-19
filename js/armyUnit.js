@@ -77,7 +77,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		}
 
 	  for (const item of mycontext.items) {
-			const requirements = item.data.requirements;
+			const requirements = item.system.requirements;
 			if (requirements) {
 				if (requirements === "Ancestry") {
 					mycontext.army.ancestry = item.name;
@@ -93,11 +93,11 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			mycontext.army.traits.push({
 				id: item._id,
 				name: item.name,
-				activation: item.data?.activation?.type || 'none',
+				activation: item.system?.activation?.type || 'none',
 				description: {
 					expanded: this._traitIsExpanded(item),
-					enriched: TextEditor.enrichHTML(item.data?.description?.value, {
-						secrets: data.owner,
+					enriched: TextEditor.enrichHTML(item.system?.description?.value, {
+						secrets: mycontext.owner,
 						entities: true,
 							links: true,
 						rolls: true,
