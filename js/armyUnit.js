@@ -75,8 +75,11 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
     if (!mycontext.actor.flags[mName]) {
 		  mycontext.actor.flags[mName] = DEFAULT_UNIT_DATA;
 		}
+    console.log("mycontext 1: ", mycontext.actor.flags[mName].army);
+		mycontext.army = mycontext.actor.flags[mName].army;
+		console.log("mycontext 1: ", mycontext.army);
 
-	  for (const item of mycontext.items) {
+		for (const item of mycontext.items) {
 			const requirements = item.system.requirements;
 			if (requirements) {
 				if (requirements === "Ancestry") {
