@@ -174,7 +174,7 @@
   font: 500 22px 'Roboto', sans-serif;
 }
 
-a.armyUnit-delTrait.armyUnit-alert {
+.onetraitbox a.armyUnit-delTrait.armyUnit-alert {
   color: darkred;
 }
 
@@ -185,6 +185,15 @@ a.armyUnit-delTrait.armyUnit-alert {
 .onetraitbox .trait-description .expanded{
   font: 300 12px 'Roboto', sans-serif;
 }
+
+.onetraitbox .armyUnit-config-trait {
+  display: block;
+}
+
+.onetraitbox .armyUnit-config-trait:hover {
+  display: flex;
+}
+
 
 .armyUnit-commander {
   padding: 3px;
