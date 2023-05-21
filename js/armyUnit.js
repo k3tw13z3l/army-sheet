@@ -161,22 +161,21 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			data: data
 		}], {renderSheet: true});
   }
-}
 
-_onDelTrait(evt) {
-	const target = evt.currentTarget;
-	if (!target.classList.contains('armyUnit-alert')) {
-					target.classList.add('armyUnit-alert');
-					return;
-	}
+  _onDelTrait(evt) {
+	  const target = evt.currentTarget;
+	  if (!target.classList.contains('armyUnit-alert')) {
+			target.classList.add('armyUnit-alert');
+			return;
+	  }
 
-	const parent = target.closest('.one-trait-box');
+	  const parent = target.closest('.one-trait-box');
+  	let itemId = parent.dataset.itemId;
+	  if (itemId && this.actor.items.get(itemId)) {
+			this.actor.deleteEmbeddedDocuments('Item', [itemId]);
+	  }
+  }
 
-	let itemId = parent.dataset.itemId;
-
-	if (itemId && this.actor.items.get(itemId)) {
-					this.actor.deleteEmbeddedDocuments('Item', [itemId]);
-	}
 }
 
 Actors.registerSheet("dnd5e", ArmySheet, {
