@@ -120,6 +120,12 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		return mycontext;
 	}
 
+  activateListeners(html) {
+	  super.activateListeners(html);
+
+		html.find('.onetraitbox').click(this._oneTraitNameClicked(this));
+  }
+
 	_traitIsExpanded(trait) {
 		return !!trait.flags[mName]?.army_trait_expanded?.[game.user.id] ||
 						!!game.user.flags[mName]?.army_trait_expanded?.[trait._id] ;
