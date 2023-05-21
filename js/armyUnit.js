@@ -148,6 +148,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
 	_onAddTrait(evt) {
 		const dataset = evt.currentTarget.dataset;
+		console.log("dataset: ", dataset);
 		const data = {
 			activation: {
 				cost: dataset.cost ? Number(dataset.cost) : null,
