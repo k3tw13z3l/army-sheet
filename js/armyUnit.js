@@ -171,7 +171,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			return;
 	  }
 
-	  const parent = target.closest('.one-trait-box');
+	  const parent = target.closest('.onetraitbox');
   	let itemId = parent.dataset.itemId;
 	  if (itemId && this.actor.items.get(itemId)) {
 			this.actor.deleteEmbeddedDocuments('Item', [itemId]);
