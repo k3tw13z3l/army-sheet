@@ -187,11 +187,11 @@
 }
 
 .onetraitbox .armyUnit-config-trait {
-  display: block;
+  display: none;
 }
 
 .onetraitbox .armyUnit-config-trait:hover {
-  display: flex;
+  display: inline-block;
 }
 
 
