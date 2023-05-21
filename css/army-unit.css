@@ -175,7 +175,6 @@
 }
 
 .traitname:hover + .armyUnit-config-trait {
-
   display: inline-block;
 }
 
@@ -193,6 +192,10 @@
 
 .onetraitbox .armyUnit-config-trait {
   display: none;
+}
+
+.onetraitbox .armyUnit-config-trait:hover {
+  display: inline-block;
 }
 
 .armyUnit-commander {
