@@ -165,6 +165,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
   _onDelTrait(evt) {
 	  const target = evt.currentTarget;
+		console.log("target:", target);
 	  if (!target.classList.contains('armyUnit-alert')) {
 			target.classList.add('armyUnit-alert');
 			return;
