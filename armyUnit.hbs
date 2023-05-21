@@ -25,6 +25,10 @@
       {{#if actor.flags.armySheet.army.traits.length}}
         {{#each actor.flags.armySheet.army.traits}}
           <div class="onetraitbox" data-item-id="{{id}}">
+            <div class="armyUnit-config-trait">
+              <a class="armyUnit-editTrait"><i class="fas fa-cog"></i></a>
+              <a class="armyUnit-delTrait"><i class="fas fa-trash"></i></a>
+            </div>
             <div class="traitname">{{name}}</div>
             <div class="trait-description {{#if description.expanded}}army-trait-expanded{{/if}}">
               <span class="trait-description">{{{description.enriched}}}</span>
