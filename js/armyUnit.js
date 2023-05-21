@@ -105,7 +105,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 				activation: item.system?.activation?.type || 'none',
 				description: {
 					expanded: this._traitIsExpanded(item),
-					enriched: TextEditor.enrichHTML(item.system?.description?.value, {
+					enriched: await TextEditor.enrichHTML(item.system?.description?.value, {
 						secrets: mycontext.owner,
 						entities: true,
 							links: true,
