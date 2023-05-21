@@ -108,7 +108,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 					enriched: await TextEditor.enrichHTML(item.system?.description?.value, {
 						secrets: mycontext.owner,
 						entities: true,
-							links: true,
+						links: true,
 						rolls: true,
 						rollData: this.actor.getRollData()
 					})
@@ -130,6 +130,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
   }
 
 	_traitIsExpanded(trait) {
+		console.log("first :",!!trait.flags[mName]?.army_trait_expanded?.[game.user.id]);
 		return !!trait.flags[mName]?.army_trait_expanded?.[game.user.id] ||
 						!!game.user.flags[mName]?.army_trait_expanded?.[trait._id] ;
   }
@@ -138,11 +139,11 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
 		console.log("ontraitclick: ", item);
 		if (item.testUserPermission(game.user, 3)) {
-			const isExpanded = !!item.flags[mName]?.army_trait_expanded?.[game.user.id];
-			item.setFlag(mName, `army_trait_expanded.${game.user.id}`, !isExpanded);
+			const isExpanded = !!item.flags[mName]?.expanded?.[game.user.id];
+			item.setFlag(mName, `expanded.${game.user.id}`, !isExpanded);
 		} else if (item.testUserPermission(game.user, 2)) {
-			const isExpanded = !!game.user.flags[mName]?.army_trait_expanded?.[item.id];
-			await game.user.setFlag(mName, `army_trait_expanded.${item.id}`, !isExpanded);
+			const isExpanded = !!game.user.flags[mName]?.expanded?.[item.id];
+			await game.user.setFlag(mName, `expanded.${item.id}`, !isExpanded);
 			this.render();
 		}
 	}
