@@ -122,7 +122,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
 	_traitIsExpanded(trait) {
 		return !!trait.flags[mName]?.army_trait_expanded?.[game.user.id] ||
-						!!game.user.flsgs(mName, `army_trait_expanded.${trait._id}`);
+						!!game.user.flags(mName, `army_trait_expanded.${trait._id}`);
   }
 
 	async _onTraitNameClicked(evt) {
