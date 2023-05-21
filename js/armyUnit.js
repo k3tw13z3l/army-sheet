@@ -123,6 +123,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
   activateListeners(html) {
 	  super.activateListeners(html);
 
+		html.find('.armyUnit-traitbox').click(this._onAddItem.bind(this));
     html.find(".traitname").click(this._onTraitNameClicked.bind(this));
   }
 
@@ -132,18 +133,33 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
   }
 
 	async _onTraitNameClicked(evt) {
-					const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
-					console.log("ontraitclick: ", item);
-					if (item.testUserPermission(game.user, 3)) {
-									const isExpanded = !!item.flags[mName]?.army_trait_expanded?.[game.user.id];
-									item.setFlag(mName, `army_trait_expanded.${game.user.id}`, !isExpanded);
-					} else if (item.testUserPermission(game.user, 2)) {
-									const isExpanded = !!game.user.flags[mName]?.army_trait_expanded?.[item.id];
-									await game.user.setFlag(mName, `army_trait_expanded.${item.id}`, !isExpanded);
-									this.render();
-					}
+		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
+		console.log("ontraitclick: ", item);
+		if (item.testUserPermission(game.user, 3)) {
+			const isExpanded = !!item.flags[mName]?.army_trait_expanded?.[game.user.id];
+			item.setFla:q!:qg(mName, `army_trait_expanded.${game.user.id}`, !isExpanded);
+		} else if (item.testUserPermission(game.user, 2)) {
+			const isExpanded = !!game.user.flags[mName]?.army_trait_expanded?.[item.id];
+			await game.user.setFlag(mName, `army_trait_expanded.${item.id}`, !isExpanded);
+			this.render();
+		}
 	}
 
+	_onAddItem(evt) {
+		const dataset = evt.currentTarget.dataset;
+		const data = {
+			activation: {
+				cost: dataset.cost ? Number(dataset.cost) : null,
+				type: dataset.type || ""
+			}
+		};
+
+		this.actor.createEmbeddedDocuments('Item', [{
+			type: 'feat',
+			name: "NewTrait",
+			data: data
+		}], {renderSheet: true});
+  }
 }
 
 Actors.registerSheet("dnd5e", ArmySheet, {
