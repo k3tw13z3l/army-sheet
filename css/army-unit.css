@@ -175,8 +175,11 @@
 }
 
 .onetraitbox .trait-description {
-  font: 300 12px 'Roboto', sans-serif;
   display: none;
+}
+
+.onetraitbox .trait-description .expanded{
+  font: 300 12px 'Roboto', sans-serif;
 }
 
 .armyUnit-commander {

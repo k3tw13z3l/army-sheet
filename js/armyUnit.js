@@ -123,7 +123,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
   activateListeners(html) {
 	  super.activateListeners(html);
 
-		html.find('.onetraitbox').click(this._oneTraitNameClicked(this));
+    html.find(".traitname").click(this._onTraitNameClicked.bind(this));
   }
 
 	_traitIsExpanded(trait) {
