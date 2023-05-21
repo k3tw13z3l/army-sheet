@@ -137,7 +137,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		console.log("ontraitclick: ", item);
 		if (item.testUserPermission(game.user, 3)) {
 			const isExpanded = !!item.flags[mName]?.army_trait_expanded?.[game.user.id];
-			item.setFla:q!:qg(mName, `army_trait_expanded.${game.user.id}`, !isExpanded);
+			item.setFla(mName, `army_trait_expanded.${game.user.id}`, !isExpanded);
 		} else if (item.testUserPermission(game.user, 2)) {
 			const isExpanded = !!game.user.flags[mName]?.army_trait_expanded?.[item.id];
 			await game.user.setFlag(mName, `army_trait_expanded.${item.id}`, !isExpanded);
