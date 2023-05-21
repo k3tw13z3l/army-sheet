@@ -22,13 +22,19 @@
       <img src="/modules/army-sheet/Images/{{actor.flags.armySheet.army.ancestry}}.png" class="armyUnitsheetimg armyUnit-token" width="50%"><img src="/modules/army-sheet/Images/{{actor.flags.armySheet.army.type}}.png" class="armyUnitsheetimg  armyUnit-token" width="50%">
     </div>
     <div class="armyUnit-traitbox">
+       <span class="armyUnit-add-traits">
+        <a class="armyUnit-add-trait">
+          <span>Add</span>
+          <i class="fas fa-cog"></i>
+        </a>
+      </span>
       {{#if actor.flags.armySheet.army.traits.length}}
         {{#each actor.flags.armySheet.army.traits}}
           <div class="onetraitbox" data-item-id="{{id}}">
-            <div class="armyUnit-config-trait">
+            <span class="armyUnit-config-trait">
               <a class="armyUnit-editTrait"><i class="fas fa-cog"></i></a>
               <a class="armyUnit-delTrait"><i class="fas fa-trash"></i></a>
-            </div>
+            </span>
             <div class="traitname">{{name}}</div>
             <div class="trait-description {{#if description.expanded}}army-trait-expanded{{/if}}">
               <span class="trait-description">{{{description.enriched}}}</span>
