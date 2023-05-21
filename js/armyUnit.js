@@ -135,11 +135,11 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 					const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
 					console.log("ontraitclick: ", item);
 					if (item.testUserPermission(game.user, 3)) {
-									const isExpanded = !!item.getFlag('armySheet', `army_trait_expanded.${game.user.id}`);
-									item.setFlag('armySheet', `army_trait_expanded.${game.user.id}`, !isExpanded);
+									const isExpanded = !!item.flags[mName]?.army_trait_expanded?.[game.user.id];
+									item.setFlag(mName, `army_trait_expanded.${game.user.id}`, !isExpanded);
 					} else if (item.testUserPermission(game.user, 2)) {
-									const isExpanded = !!game.user.getFlag('armySheet', `army_trait_expanded.${item.id}`);
-									await game.user.setFlag('armySheet', `army_trait_expanded.${item.id}`, !isExpanded);
+									const isExpanded = !!game.user.flags[mName]?.army_trait_expanded.[item.id];
+									await game.user.setFlag(mName, `army_trait_expanded.${item.id}`, !isExpanded);
 									this.render();
 					}
 	}
