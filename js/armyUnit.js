@@ -130,9 +130,9 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
   }
 
 	_traitIsExpanded(trait) {
-		console.log("first :",!!trait.flags[mName]?.army_trait_expanded?.[game.user.id]);
-		return !!trait.flags[mName]?.army_trait_expanded?.[game.user.id] ||
-						!!game.user.flags[mName]?.army_trait_expanded?.[trait._id] ;
+		console.log("first :",trait.flags[mName]);
+		return !!trait.flags[mName]?.expanded?.[game.user.id] ||
+						!!game.user.flags[mName]?.expanded?.[trait._id] ;
   }
 
 	async _onTraitNameClicked(evt) {
