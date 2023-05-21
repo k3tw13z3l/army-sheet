@@ -125,6 +125,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
 		html.find('.armyUnit-addTrait').click(this._onAddTrait.bind(this));
 		html.find('.armyUnit-delTrait').click(this._onDelTrait.bind(this));
+		html.find('.armyUnit-editTrait').click(this._onEditTrait.bind(this));
     html.find(".traitname").click(this._onTraitNameClicked.bind(this));
   }
 
@@ -163,9 +164,13 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		}], {renderSheet: true});
   }
 
+	_onEditTrait(evt) {
+		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
+		item.sheet.render(true);
+}
+
   _onDelTrait(evt) {
 	  const target = evt.currentTarget;
-		console.log("target:", target);
 	  if (!target.classList.contains('armyUnit-alert')) {
 			target.classList.add('armyUnit-alert');
 			return;
