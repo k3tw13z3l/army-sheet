@@ -153,7 +153,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		// 	this.render();
 		// }
 		const target = evt.currentTarget;
-		const parent = target.closest(',onetraitbox');
+		const parent = target.closest('.onetraitbox');
 		console.log("target :", target);
 		console.log("target :", parent);
 		if(!target.classList.contains('expanded')) {
