@@ -143,11 +143,14 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 	async _onTraitNameClicked(evt) {
 		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
     const traits = this.actor.flags[mName]?.army.traits;
+
 		for (var i=0; i<traits.length; i++) {
 			const cTrait = traits[i];
-		  if (cTrait.id === item.id){
+		  console.log("before :",ctraits.description.expanded)
+			if (cTrait.id === item.id){
 				 this.actor.setFlag(mName, cTrait.description.expanded, !cTrait.description.expanded);
 			}
+			console.log("after :",ctraits.description.expanded)
 		}
 	}
 
