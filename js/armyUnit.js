@@ -142,9 +142,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
 	async _onTraitNameClicked(evt) {
 		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
-		const iteme = this.actor.items.get(evt.currentTarget.closest('.onetraitbox'));
 		console.log("ontraitclick 1: ", item);
-		console.log("ontraitclick 2: ", iteme);
 		// console.log("ontraitclick 2: ", item.getUserLevel(game));
 		// if (item.testUserPermission(game.user, 3)) {
 		// 	const isExpanded = !!this.actor.flags[mName]?.army.traits.expanded?.[game.user.id];
@@ -154,6 +152,8 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		// 	await game.user.setFlag(mName, `expanded.${item.id}`, !isExpanded);
 		// 	this.render();
 		// }
+    console.log("trait length :", this.actor.flags[mName]?.army.traits.length);
+
 		const target = evt.currentTarget;
 		const parent = target.closest('.onetraitbox');
 		console.log("target :", target);
