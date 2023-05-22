@@ -30,10 +30,9 @@
           <div class="onetraitbox" data-item-id="{{id}}">
             <span class="traitname">{{name}}</span>
             <span class="armyUnit-config-trait">
-              <a class="armyUnit-editTrait"><i class="fas fa-cog"></i></a>
               <a class="armyUnit-delTrait"><i class="fas fa-trash"></i></a>
             </span>
-            <div class="trait-description {{#if description.expanded}}army-trait-expanded{{/if}}">
+            <div class="trait-description {{#if description.expanded}}expanded{{/if}}">
               <span class="trait-description">{{{description.enriched}}}</span>
             </div>
           </div>
