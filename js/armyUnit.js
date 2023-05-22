@@ -152,7 +152,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		// 	await game.user.setFlag(mName, `expanded.${item.id}`, !isExpanded);
 		// 	this.render();
 		// }
-		const target = evt.currentTarget;
+		const target = evt.currentTarget.closest('.trait-description');
 		if(!target.classList.contains('expanded')) {
 			target.classList.add('expanded');
 			return;
