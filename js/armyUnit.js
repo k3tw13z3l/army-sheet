@@ -104,7 +104,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 				name: item.name,
 				activation: item.system?.activation?.type || 'none',
 				description: {
-					expanded: true,
+					expanded: false,
 					enriched: await TextEditor.enrichHTML(item.system?.description?.value, {
 						secrets: mycontext.owner,
 						entities: true,
@@ -128,7 +128,6 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		html.find('.traitname').mousedown(async (event) => {
 			if (event.which === 2) {
 				const item = this.actor.items.get(event.currentTarget.closest('.onetraitbox').dataset.itemId);
-				console.log("middle click :", item);
 		    item.sheet.render(true);
 			}
 		});
@@ -170,11 +169,6 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			data: data
 		}], {renderSheet: true});
   }
-
-	_onEditTrait(evt) {
-		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
-		item.sheet.render(true);
-}
 
   _onDelTrait(evt) {
 	  const target = evt.currentTarget;
