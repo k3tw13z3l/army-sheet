@@ -125,7 +125,11 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
 		html.find('.armyUnit-addTrait').click(this._onAddTrait.bind(this));
 		html.find('.armyUnit-delTrait').click(this._onDelTrait.bind(this));
-		html.find('.armyUnit-editTrait').click(this._onEditTrait.bind(this));
+		html.find('.armyUnit-editTrait').mousedown(async (event) => {
+			if (event.which === 2) {
+		  	this._onEditTrait.bind(this);
+			}
+		});
     html.find(".traitname").click(this._onTraitNameClicked.bind(this));
   }
 
@@ -139,7 +143,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
 		console.log("ontraitclick: ", item);
 		if (item.testUserPermission(game.user, 3)) {
-			const isExpanded = !!item.flags[mName]?.expanded?.[game.user.id];
+			const isExpanded = !!this.actor.flags[mName]?.army.traits.expanded?.[game.user.id];
 			item.setFlag(mName, `expanded.${game.user.id}`, !isExpanded);
 		} else if (item.testUserPermission(game.user, 2)) {
 			const isExpanded = !!game.user.flags[mName]?.expanded?.[item.id];
