@@ -144,9 +144,9 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
     const traits = this.actor.flags[mName]?.army.traits;
 		for (var i=0; i<traits.length; i++) {
-			const currentTrait = traits[i];
-		  if (currentTrait.id === item.id){
-				 this.actor.setFlag(mName, description.expanded, !currentTrait.description.expanded);
+			const cTrait = traits[i];
+		  if (cTrait.id === item.id){
+				 this.actor.setFlag(mName, cTrait.description.expanded, !cTrait.description.expanded);
 			}
 		}
 	}
