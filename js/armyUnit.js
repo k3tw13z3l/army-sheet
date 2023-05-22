@@ -142,7 +142,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
 	async _onTraitNameClicked(evt) {
 		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
-		const iteme = this.actor.items.get(evt.currentTarget.closest('.onetraitbox');
+		const iteme = this.actor.items.get(evt.currentTarget.closest('.onetraitbox'));
 		console.log("ontraitclick 1: ", item);
 		console.log("ontraitclick 2: ", iteme);
 		// console.log("ontraitclick 2: ", item.getUserLevel(game));
