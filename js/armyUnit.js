@@ -150,6 +150,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			if (cTrait.id === item.id){
 				 cTrait.description.expanded = !cTrait.description.expanded;
 				 console.log("if :", cTrait.description.expanded)
+				 this.actor.setFlag(mName, "army.traits[i].description.expanded", relations);
 			}
 			console.log("after :",cTrait.description.expanded)
 		}
