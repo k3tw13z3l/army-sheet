@@ -109,6 +109,11 @@
   font: 500 25px 'Roboto', sans-serif;
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
 }
+.armyUnit-bio {
+  top: -400px;
+  left: 17px;
+  color: white;
+}
 
 .armyUnit-bio-text {
   font: 300 12px 'Roboto', sans-serif;
