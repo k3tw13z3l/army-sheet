@@ -141,17 +141,17 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
   }
 
 	async _onTraitNameClicked(evt) {
-		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
-		console.log("ontraitclick 1: ", item);
-		console.log("ontraitclick 2: ", item.getUserLevel(game));
-		if (item.testUserPermission(game.user, 3)) {
-			const isExpanded = !!this.actor.flags[mName]?.army.traits.expanded?.[game.user.id];
-			item.setFlag(mName, `expanded.${game.user.id}`, !isExpanded);
-		} else if (item.testUserPermission(game.user, 2)) {
-			const isExpanded = !!game.user.flags[mName]?.expanded?.[item.id];
-			await game.user.setFlag(mName, `expanded.${item.id}`, !isExpanded);
-			this.render();
-		}
+		// const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
+		// console.log("ontraitclick 1: ", item);
+		// console.log("ontraitclick 2: ", item.getUserLevel(game));
+		// if (item.testUserPermission(game.user, 3)) {
+		// 	const isExpanded = !!this.actor.flags[mName]?.army.traits.expanded?.[game.user.id];
+		// 	item.setFlag(mName, `expanded.${game.user.id}`, !isExpanded);
+		// } else if (item.testUserPermission(game.user, 2)) {
+		// 	const isExpanded = !!game.user.flags[mName]?.expanded?.[item.id];
+		// 	await game.user.setFlag(mName, `expanded.${item.id}`, !isExpanded);
+		// 	this.render();
+		// }
 		const target = evt.currentTarget;
 		if(!target.classlist.contains('expanded')) {
 			target.classlist.add('expanded');
