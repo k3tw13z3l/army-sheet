@@ -152,7 +152,12 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		// 	await game.user.setFlag(mName, `expanded.${item.id}`, !isExpanded);
 		// 	this.render();
 		// }
-    console.log("trait length :", this.actor.flags[mName]?.army.traits.length);
+    notrait=this.actor.flags[mName]?.army.traits.length;
+		for (var i=0; i<notrait; i++) {
+			let currentTrait = this.actor.flags[mName]?.army.traits[i]
+      console.log("cur trait :", currentTrait.id);
+			console.log("cur trait :", currentTrait.description.expanded);
+		}
 
 		const target = evt.currentTarget;
 		const parent = target.closest('.onetraitbox');
