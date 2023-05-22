@@ -125,7 +125,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
 		html.find('.armyUnit-addTrait').click(this._onAddTrait.bind(this));
 		html.find('.armyUnit-delTrait').click(this._onDelTrait.bind(this));
-		html.find('.armyUnit-editTrait').mousedown(async (event) => {
+		html.find('.traitname').mousedown(async (event) => {
 			if (event.which === 2) {
 		  	this._onEditTrait.bind(this);
 			}
