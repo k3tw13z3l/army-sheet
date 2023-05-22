@@ -142,39 +142,14 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
 	async _onTraitNameClicked(evt) {
 		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
-		console.log("ontraitclick 1: ", item.id);
-		// console.log("ontraitclick 2: ", item.getUserLevel(game));
-		// if (item.testUserPermission(game.user, 3)) {
-		// 	const isExpanded = !!this.actor.flags[mName]?.army.traits.expanded?.[game.user.id];
-		// 	item.setFlag(mName, `expanded.${game.user.id}`, !isExpanded);
-		// } else if (item.testUserPermission(game.user, 2)) {
-		// 	const isExpanded = !!game.user.flags[mName]?.expanded?.[item.id];
-		// 	await game.user.setFlag(mName, `expanded.${item.id}`, !isExpanded);
-		// 	this.render();
-		// }
-    const notrait=this.actor.flags[mName]?.army.traits.length;
+    const notrait = this.actor.flags[mName]?.army.traits.length;
 		for (var i=0; i<notrait; i++) {
 			const currentTrait = this.actor.flags[mName]?.army.traits[i];
-      console.log("cur trait :", currentTrait.id);
-			console.log("cur trait :", currentTrait.description.expanded);
 		  if (currentTrait.id === item.id){
 				currentTrait.description.expanded = !currentTrait.description.expanded;
+				actor.render(true)
 			}
-			console.log("cur trait flip:", currentTrait.description.expanded);
 		}
-
-		const target = evt.currentTarget;
-		const parent = target.closest('.onetraitbox');
-		console.log("target :", target);
-		console.log("parent :", parent);
-		if(!target.classList.contains('expanded')) {
-			target.classList.add('expanded');
-			return;
-		} else {
-			target.classList.remove('expanded');
-			return;
-		}
-
 	}
 
 	_onAddTrait(evt) {
