@@ -110,6 +110,10 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
 }
 
+.armyUnit-bio-text {
+  font: 300 12px 'Roboto', sans-serif;
+}
+
 .armyUnit-hp {
   padding: 7px;
   border-radius: 20px/20px;
