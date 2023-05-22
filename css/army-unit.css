@@ -191,7 +191,7 @@
   display: none;
 }
 
-.trait-description +.expanded{
+.onetraitbox .trait-description.expanded.p{
   font: 300 12px 'Roboto', sans-serif;
   display: inline-block;
 }

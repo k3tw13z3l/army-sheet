@@ -147,7 +147,6 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			const currentTrait = this.actor.flags[mName]?.army.traits[i];
 		  if (currentTrait.id === item.id){
 				currentTrait.description.expanded = !currentTrait.description.expanded;
-				this.actor.sheet.render(true)
 			}
 		}
 	}
