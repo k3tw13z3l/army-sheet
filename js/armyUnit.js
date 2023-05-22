@@ -104,7 +104,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 				name: item.name,
 				activation: item.system?.activation?.type || 'none',
 				description: {
-					expanded: false,
+					expanded: this._traitIsExpanded(item),
 					enriched: await TextEditor.enrichHTML(item.system?.description?.value, {
 						secrets: mycontext.owner,
 						entities: true,
@@ -135,7 +135,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
   }
 
 	_traitIsExpanded(trait) {
-		console.log("first :",trait.flags[mName]);
+		console.log("first :",trait);
 		return !!trait.flags[mName]?.expanded?.[game.user.id] ||
 						!!game.user.flags[mName]?.expanded?.[trait._id] ;
   }
@@ -143,6 +143,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 	async _onTraitNameClicked(evt) {
 		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
 		console.log("ontraitclick: ", item);
+		console.log("ontraitclick: ", item.getUserLevel(game));
 		if (item.testUserPermission(game.user, 3)) {
 			const isExpanded = !!this.actor.flags[mName]?.army.traits.expanded?.[game.user.id];
 			item.setFlag(mName, `expanded.${game.user.id}`, !isExpanded);
