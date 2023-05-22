@@ -141,7 +141,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
   }
 
 	async _onTraitNameClicked(evt) {
-		const item = this.actor.items.get(evt.currentTarget.closest('.trait-description').dataset.itemId);
+		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
 		console.log("ontraitclick 1: ", item.id);
 		// console.log("ontraitclick 2: ", item.getUserLevel(game));
 		// if (item.testUserPermission(game.user, 3)) {
@@ -157,6 +157,10 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			const currentTrait = this.actor.flags[mName]?.army.traits[i];
       console.log("cur trait :", currentTrait.id);
 			console.log("cur trait :", currentTrait.description.expanded);
+		  if (currentTrait.id === item.id){
+				currentTrait.description.expanded = !currentTrait.description.expanded;
+			}
+			console.log("cur trait flip:", currentTrait.description.expanded);
 		}
 
 		const target = evt.currentTarget;
