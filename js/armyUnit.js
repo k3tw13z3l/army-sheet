@@ -206,17 +206,6 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
     this.actor.rollKWUnitAttribute(evt.currentTarget.dataset['kwRoll'], {event: evt});
   }
 
-	Handlebars.registerHelper('armyUnit-number-format', function (n, options) {
-		if (n == null) {
-						return '';
-		}
-
-		const places = options.hash.decimals || 0;
-		const sign = !!options.hash.sign;
-		n = parseFloat(n).toFixed(places);
-		return sign && n >= 0 ? '+' + n : n;
-  });
-
 }
 
 Actors.registerSheet("dnd5e", ArmySheet, {
@@ -226,4 +215,15 @@ Actors.registerSheet("dnd5e", ArmySheet, {
 
 Hooks.on("ready", function() {
   console.log("-=> Army Sheet v" + ArmySheet_Version + " <=-");
+});
+
+Handlebars.registerHelper('armyUnit-number-format', function (n, options) {
+	if (n == null) {
+					return '';
+	}
+
+	const places = options.hash.decimals || 0;
+	const sign = !!options.hash.sign;
+	n = parseFloat(n).toFixed(places);
+	return sign && n >= 0 ? '+' + n : n;
 });
