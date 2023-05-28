@@ -158,9 +158,9 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 				 cTrait.description.expanded = !cTrait.description.expanded;
 				 console.log("if :", cTrait.description.expanded)
 			}
+			window.MidiQOL.showItemInfo.bind(trait)();
 			console.log("after :",cTrait.description.expanded)
 		}
-		_onShowTraitInfo(item);
 		return;
 	}
 
