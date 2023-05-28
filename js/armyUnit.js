@@ -160,7 +160,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			}
 			console.log("after :",cTrait.description.expanded)
 		}
-		_onShowTraitInfo.bind(item);
+		_onShowTraitInfo(item);
 		return;
 	}
 
