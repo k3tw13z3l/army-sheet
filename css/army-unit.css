@@ -124,7 +124,7 @@
   border-radius: 20px/20px;
   background: rgba(230, 230, 230, 0.4);
   position: relative;
-  top: -498px;
+  top: -513px;
   left: 573px;
   z-index: 3;
   color: #000;
@@ -161,7 +161,7 @@
 .armyUnit-traitbox {
   color: white;
   position: relative;
-  top: -499px;
+  top: -520px;
   left: 17px;
   z-index: 2;
   height: 220px;
@@ -203,7 +203,7 @@
   color: black;
   position: relative;
   width: 250px;
-  top: -551px;
+  top: -570px;
   left: 424px;
 }
 
@@ -226,7 +226,7 @@
   padding: 7px;
   border-style: solid;
   z-index: 3;
-  top: -542px;
+  top: -550px;
   left: 10px;
   background: white;
 }
