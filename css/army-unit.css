@@ -78,6 +78,7 @@
 
 .armyUnit-name input[type="text"] {
   color: blanchedalmond;
+  position: relative;
   opacity: 1;
   padding: 5px;
   text-align: left;
