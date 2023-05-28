@@ -243,11 +243,7 @@
   vertical-align: middle;
 }
 
-.armyUnit-statbonus {
-  font: 900 25px 'Roboto', sans-serif;
-}
-
-.armyUnit-statname {
+.armyUnit-statbonus .armyUnit-statname .armyUnit-statvalue {
   font: 900 25px 'Roboto', sans-serif;
 }
 
