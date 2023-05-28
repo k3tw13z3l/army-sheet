@@ -48,7 +48,8 @@
     </div>
     <div class="armyUnit-stats">
       <div class="armyUnit-statblock">
-        <span class="armyUnit-statbonus armyUnit-rollable" id="attack-stat">+{{actor.flags.armySheet.army.stats.attack.bonus}}</span>
+        {{!-- <span class="armyUnit-statbonus armyUnit-rollable" id="attack-stat">+{{actor.flags.armySheet.army.stats.attack.bonus}}</span> --}}
+        <input class="armyUnit-statbonus" type="number" data-dtype="Number" id="attack-stat" name="{{actor.flags.armySheet.army.stats.attack.bonus}}" value="{{actor.flags.armySheet.army.stats.attack.bonus}}">
         {{#if stat.advantage}}<span class="armyUnit-advantage">+</span>{{/if}}
         {{#if stat.disadvantage}}<span class="armyUnit-disadvantage">-</span>{{/if}}
         <span class="armyUnit-statname">ATK</span>
