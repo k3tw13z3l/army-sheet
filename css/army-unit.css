@@ -76,7 +76,7 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
 }
 
-.armyUnit-name input[type="text"] {
+.armyUnit-name input {
   color: blanchedalmond;
   position: relative;
   opacity: 1;
