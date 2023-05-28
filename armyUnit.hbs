@@ -5,7 +5,7 @@
     </div>
     <div class="armyUnit-name">
       {{!-- <span>{{actor.name}}</span> --}}
-      <input type="text" data-dtype="String" name="name" value="{{actor.name}}" placeholder="UnitName">
+      <input class="armyUnit-name" type="text" data-dtype="String" name="name" value="{{actor.name}}" placeholder="UnitName">
     </div>
     {{log actor}}
     <div class="armyUnit-text">
@@ -48,16 +48,18 @@
     </div>
     <div class="armyUnit-stats">
       <div class="armyUnit-statblock">
-        <div>+7</div>
-        <div>ATK</div>
+        <div class="armyUnit-statbonus">+7</div>
+        <div class="armyUnit=statname">ATK</div>
       </div>
       <div class="armyUnit-statblock">
-        <div>+8</div>
-        <div>POW</div>
+        <span class="armyUnit-statbonus">+8</span>
+        {{#if stat.advantage}}<span class="armyUnit-advantage">+</span>{{/if}}
+        {{#if stat.disadvantage}}<span class="armyUnit-disadvantage">-</span>{{/if}}
+        <span class="armyUnit=statname">POW</span>
       </div>
       <div class="armyUnit-statblock">
-        <div>+4</div>
-        <div>COM</div>
+        <div class="armyUnit-statbonus">+4</div>
+        <div class="armyUnit=statname">COM</div>
       </div>
       <div class="armyUnit-statspacer">
         <div class="armyUnit-attack">

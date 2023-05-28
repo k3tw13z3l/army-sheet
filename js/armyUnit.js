@@ -123,6 +123,8 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
   activateListeners(html) {
 	  super.activateListeners(html);
 
+		html.click(this._onWindowClick.bind(this));
+
 		html.find('.armyUnit-addTrait').click(this._onAddTrait.bind(this));
 		html.find('.armyUnit-delTrait').click(this._onDelTrait.bind(this));
 		html.find('.traitname').mousedown(async (event) => {
@@ -132,6 +134,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			}
 		});
     html.find(".traitname").click(this._onTraitNameClicked.bind(this));
+		html.find('armyUnit-roll').click(this._onRollAttribute.bind(this));
   }
 
 	_traitIsExpanded(trait) {
@@ -185,6 +188,18 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 	  if (itemId && this.actor.items.get(itemId)) {
 			this.actor.deleteEmbeddedDocuments('Item', [itemId]);
 	  }
+  }
+
+	_onWindowClick(evt) {
+		const rmItem = evt.target.closest('.onetraitbox');
+
+		if (!rmItem) {
+						$('.armyUnit-alert').removeClass('armyUnit-alert');
+		}
+ }
+
+  _onRollAttribute(evt) {
+    this.actor.rollKWUnitAttribute(evt.currentTarget.dataset['kwRoll'], {event: evt});
   }
 
 }
