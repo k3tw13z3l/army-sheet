@@ -71,7 +71,7 @@
   color: #ffffff;
   opacity: 1;
   text-align: left;
-  padding: 2px;
+  margin: 2px;
   font: 900 35px 'Roboto Condensed';
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
 }
