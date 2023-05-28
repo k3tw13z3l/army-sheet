@@ -48,20 +48,20 @@
     </div>
     <div class="armyUnit-stats">
       <div class="armyUnit-statblock">
-        <span class="armyUnit-statbonus armyUnit-rollable" id="ATK-stat">+7</span>
+        <span class="armyUnit-statbonus armyUnit-rollable" id="attack-stat">+7</span>
         {{#if stat.advantage}}<span class="armyUnit-advantage">+</span>{{/if}}
         {{#if stat.disadvantage}}<span class="armyUnit-disadvantage">-</span>{{/if}}
         <span class="armyUnit-statname">ATK</span>
       </div>
       <div class="armyUnit-statblock">
-        <span class="armyUnit-statbonus armyUnit-rollable" id="POW-stat">+8</span>
+        <span class="armyUnit-statbonus armyUnit-rollable" id="power-stat">+8</span>
         {{#if stat.advantage}}<span class="armyUnit-advantage">+</span>{{/if}}
         {{#if stat.disadvantage}}<span class="armyUnit-disadvantage">-</span>{{/if}}
         <span class="armyUnit-statname">POW</span>
       </div>
       <div class="armyUnit-statblock">
-        <div class="armyUnit-statbonus">+4</div>
-        <div class="armyUnit-statname">COM</div>
+        <span class="armyUnit-statbonus armyUnit-rollable" id="command-stat">+4</span>
+        <span class="armyUnit-statname">COM</span>
       </div>
       <div class="armyUnit-statspacer">
         <div class="armyUnit-attack">
@@ -88,16 +88,16 @@
         </div>
       </div>
       <div class="armyUnit-statblock">
-        <div>15</div>
-        <div>DEF</div>
+        <span class="armyUnit-statvalue" id="defense-stat">15</span>
+        <span class="armyUnit-statname">DEF</span>
       </div>
       <div class="armyUnit-statblock">
-        <div>16</div>
-        <div>TOU</div>
+        <span class="armyUnit-statvalue" id="toughness-stat">16</span>
+        <span class="armyUnit-statname">TOU</span>
       </div>
       <div class="armyUnit-statblock">
-        <div>+3</div>
-        <div>MOR</div>
+        <span class="armyUnit-statvalue" id="morale-stat">+3</span>
+        <span class="armyUnit-statname">MOR</span>
       </div>
     </div>
   </div>
