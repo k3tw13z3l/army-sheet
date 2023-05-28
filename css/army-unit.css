@@ -333,7 +333,7 @@
 
 .armyUnit-tier-text {
   color: #dcdddf;
-  left: 74px;
+  left: 75px;
   top: -148px;
   font: 400 16px 'Roboto Slab', sans-serif;
   text-align: center;
@@ -343,7 +343,7 @@
 
 .armyUnit-tier-text div {
   position: relative;
-  top: -30px;
+  top: -27px;
   color: #000000;
   /* text-align: center; */
   font: 500 28px 'Roboto Slab', sans-serif;
