@@ -23,17 +23,21 @@ const DEFAULT_UNIT_DATA = {
 				advantage: 0,
 				disadvantage: 0
 			},
-			defense: {
-				value: null,
-				bonus: 0,
-				advantage: 0,
-				disadvantage: 0
-			},
 			power: {
 				value: null,
 				bonus: 0,
 				advantage: 0,
 				disadvantage: 0
+			},
+			command: {
+				value: null,
+				bonus: 0,
+				advantage: 0,
+				disadvantage: 0
+			},
+			defense: {
+				value: null,
+				bonus: 0,
 			},
 			toughness: {
 				value: null,
