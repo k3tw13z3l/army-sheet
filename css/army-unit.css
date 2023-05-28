@@ -239,6 +239,8 @@
   width: 75px;
   height: 60px;
   float: left;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .armyUnit-statbonus {
@@ -249,8 +251,7 @@
 
 .armyUnit-statname {
   font: 900 25px 'Roboto', sans-serif;
-  text-align: center;
-  vertical-align: middle;
+
 }
 
 .armyUnit-statspacer {
