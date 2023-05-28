@@ -48,18 +48,20 @@
     </div>
     <div class="armyUnit-stats">
       <div class="armyUnit-statblock">
-        <div class="armyUnit-statbonus">+7</div>
-        <div class="armyUnit=statname">ATK</div>
-      </div>
-      <div class="armyUnit-statblock">
-        <span class="armyUnit-statbonus">+8</span>
+        <span class="armyUnit-statbonus armyUnit-rollable" id="ATK-stat">+7</span>
         {{#if stat.advantage}}<span class="armyUnit-advantage">+</span>{{/if}}
         {{#if stat.disadvantage}}<span class="armyUnit-disadvantage">-</span>{{/if}}
-        <span class="armyUnit=statname">POW</span>
+        <span class="armyUnit-statname">ATK</span>
+      </div>
+      <div class="armyUnit-statblock">
+        <span class="armyUnit-statbonus armyUnit-rollable" id="POW-stat">+8</span>
+        {{#if stat.advantage}}<span class="armyUnit-advantage">+</span>{{/if}}
+        {{#if stat.disadvantage}}<span class="armyUnit-disadvantage">-</span>{{/if}}
+        <span class="armyUnit-statname">POW</span>
       </div>
       <div class="armyUnit-statblock">
         <div class="armyUnit-statbonus">+4</div>
-        <div class="armyUnit=statname">COM</div>
+        <div class="armyUnit-statname">COM</div>
       </div>
       <div class="armyUnit-statspacer">
         <div class="armyUnit-attack">
