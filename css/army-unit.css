@@ -247,7 +247,7 @@
   vertical-align: middle;
 }
 
-.armyUnit-statbonus {
+.armyUnit-statbonus input[type="number"] {
   font: 900 25px 'Roboto', sans-serif;
 }
 
