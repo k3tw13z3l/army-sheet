@@ -4,8 +4,8 @@
       <img class="armyUnit-artwork" src="{{actor.img}}" alt="artwork" data-edit="img" />
     </div>
     <div class="armyUnit-name">
-      <span>{{actor.name}}</span>
-      {{!-- <input class="armyUnit-name" type="text" data-dtype="String" name="name" value="{{actor.name}}" placeholder="UnitName"> --}}
+      {{!-- <span>{{actor.name}}</span> --}}
+      <input class="armyUnit-name" type="text" data-dtype="String" name="name" value="{{actor.name}}" placeholder="UnitName">
     </div>
     {{log actor}}
     <div class="armyUnit-text">
@@ -44,17 +44,17 @@
     </div>
     <div class="armyUnit-commander">
       <span class="commander">Commander</span><br>
-      <span> - {{actor.flags.armySheet.army.unit.commander}}</span>
+      <span> - {{actor.flags.armySheet.army.commander}}</span>
     </div>
     <div class="armyUnit-stats">
       <div class="armyUnit-statblock">
-        <span class="armyUnit-statbonus armyUnit-rollable" id="attack-stat">+7</span>
+        <span class="armyUnit-statbonus armyUnit-rollable" id="attack-stat">+{{actor.flags.armySheet.army.stats.attack.bonus}}</span>
         {{#if stat.advantage}}<span class="armyUnit-advantage">+</span>{{/if}}
         {{#if stat.disadvantage}}<span class="armyUnit-disadvantage">-</span>{{/if}}
         <span class="armyUnit-statname">ATK</span>
       </div>
       <div class="armyUnit-statblock">
-        <span class="armyUnit-statbonus armyUnit-rollable" id="power-stat">+8</span>
+        <span class="armyUnit-statbonus armyUnit-rollable" id="power-stat">+{{actor.flags.armySheet.army.stats.power.bonus}}</span>
         {{#if stat.advantage}}<span class="armyUnit-advantage">+</span>{{/if}}
         {{#if stat.disadvantage}}<span class="armyUnit-disadvantage">-</span>{{/if}}
         <span class="armyUnit-statname">POW</span>
