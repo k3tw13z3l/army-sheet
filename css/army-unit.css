@@ -234,13 +234,17 @@
 
 .armyUnit-statblock {
   position: relative;
-  font: 900 30px 'Roboto', sans-serif;
   padding: 7px;
   margin: 2px;
   width: 75px;
   height: 60px;
-  text-align: center;
   float: left;
+}
+
+.armyUnit-statbonus .armyUnit-statname{
+  font: 900 30px 'Roboto', sans-serif;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .armyUnit-statspacer {
