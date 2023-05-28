@@ -160,6 +160,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 			}
 			console.log("after :",cTrait.description.expanded)
 		}
+		this._onShowTraitInfo.bind(this);
 		return;
 	}
 
@@ -206,11 +207,10 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
     this.actor.rollKWUnitAttribute(evt.currentTarget.dataset['kwRoll'], {event: evt});
   }
 
-	_onShowTraitInfo(evt) {
+	_onShowTraitInfo(trait) {
 		if (!game.modules.get("midi-qol")?.active) {
 			return;
-  }
-		const trait = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
+    }
 		window.MidiQOL.showItemInfo.bind(trait)();
   }
 
