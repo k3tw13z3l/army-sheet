@@ -193,10 +193,6 @@
 }
 
 .onetraitbox .trait-description {
-  display: none;
-}
-
-.onetraitbox .trait-description.expanded {
   font: 300 12px 'Roboto', sans-serif;
   display: inline-block;
 }
