@@ -108,7 +108,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 				name: item.name,
 				activation: item.system?.activation?.type || 'none',
 				description: {
-					expanded: true,
+					expanded: this._traitIsExpanded(item),
 					enriched: await TextEditor.enrichHTML(item.system?.description?.value, {
 						secrets: mycontext.owner,
 						entities: true,
@@ -144,7 +144,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 	_traitIsExpanded(trait) {
 		console.log("first :",trait);
 		return !!trait.flags[mName]?.expanded?.[game.user.id] ||
-						!!game.user.flags[mName]?.expanded?.[trait._id] ;
+						!!game.user.getFlag(mName, `expanded?.${trait._id}`);
   }
 
 	async _onTraitNameClicked(evt) {
@@ -153,6 +153,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
 		for (var i=0; i<traits.length; i++) {
 			const cTrait = traits[i];
+			const isExpanded = !!item.getFlag(mName,,
 		  console.log("before :",cTrait.description.expanded);
 			if (cTrait.id === item.id){
 				 cTrait.description.expanded = !cTrait.description.expanded;
@@ -205,13 +206,6 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 
   _onRollAttribute(evt) {
     this.actor.rollKWUnitAttribute(evt.currentTarget.dataset['kwRoll'], {event: evt});
-  }
-
-	_onShowTraitInfo(trait) {
-		if (!game.modules.get("midi-qol")?.active) {
-			return;
-    }
-		window.MidiQOL.showItemInfo.bind(trait)();
   }
 
 }

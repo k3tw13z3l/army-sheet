@@ -192,9 +192,13 @@
   color: darkred;
 }
 
-.onetraitbox .trait-description {
+.onetraitbox .trait-description.expanded {
   font: 300 12px 'Roboto', sans-serif;
   display: inline-block;
+}
+
+.onetraitbox .trait-description {
+  display: none;
 }
 
 .armyUnit-commander {

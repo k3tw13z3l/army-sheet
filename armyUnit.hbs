@@ -35,11 +35,8 @@
             <span class="armyUnit-config-trait">
               <a class="armyUnit-delTrait">&nbsp;<i class="fas fa-trash"></i></a>
             </span>
-            {{#if description.expanded}}
-            <div class="trait-description">
+            <div class="trait-description {{#if description.expanded}}expanded{{/if}}">
               {{{description.enriched}}}
-            </div>
-            {{/if}}
           </div>
         {{/each}}
       {{/if}}
