@@ -102,7 +102,6 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 					continue;
 				}
 			}
-			console.log("mycontent item: ", item);
 			mycontext.army.traits.push({
 				id: item._id,
 				name: item.name,
@@ -171,10 +170,11 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		if (item.testUserPermission(game.user, 3)) {
 						const isExpanded = !!item.getFlag(mName, `expanded.${game.user.id}`);
 						item.setFlag(mName, `expanded.${game.user.id}`, !isExpanded);
-						console.log("onclick: ", item);
+						console.log("onclick user-3: ", item);
 		} else if (item.testUserPermission(game.user, 2)) {
 						const isExpanded = !!game.user.getFlag(mName, `expanded.${item.id}`);
 						await game.user.setFlag(mName, `expanded.${item.id}`, !isExpanded);
+						console.log("onclick user-2: ", item);
 						this.render();
 		}
   }
