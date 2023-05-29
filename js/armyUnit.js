@@ -1,6 +1,6 @@
 const ArmySheet_Author = "k3tw13z3l";
 const ArmySheet_Version = "0.0.0";
-const mName="armySheet";
+const mName="army-sheet";
 
 const DEFAULT_UNIT_DATA = {
 	army: {
