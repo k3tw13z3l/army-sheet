@@ -147,23 +147,36 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 						!!game.user.getFlag(mName, `expanded?.${trait._id}`);
   }
 
+	// async _onTraitNameClicked(evt) {
+	// 	const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
+  //   const traits = this.actor.flags[mName]?.army.traits;
+
+	// 	for (var i=0; i<traits.length; i++) {
+	// 		const cTrait = traits[i];
+	// 	  console.log("before :",cTrait.description.expanded);
+	// 		const isExpanded = !!item.getFlag(mName, `expanded.${game.user.id}`);
+	// 	  console.log("before 2:", isExpanded);
+	// 		if (cTrait.id === item.id){
+	// 			 cTrait.description.expanded = !cTrait.description.expanded;
+	// 			 console.log("if :", cTrait.description.expanded)
+	// 		}
+	// 		window.MidiQOL.showItemInfo.bind(item)(); // To chat
+	// 		console.log("after :",cTrait.description.expanded)
+	// 	}
+	// 	return;
+	// }
+
 	async _onTraitNameClicked(evt) {
 		const item = this.actor.items.get(evt.currentTarget.closest('.onetraitbox').dataset.itemId);
-    const traits = this.actor.flags[mName]?.army.traits;
-
-		for (var i=0; i<traits.length; i++) {
-			const cTrait = traits[i];
-			const isExpanded = !!item.getFlag(mName,,
-		  console.log("before :",cTrait.description.expanded);
-			if (cTrait.id === item.id){
-				 cTrait.description.expanded = !cTrait.description.expanded;
-				 console.log("if :", cTrait.description.expanded)
-			}
-			window.MidiQOL.showItemInfo.bind(item)(); // To chat
-			console.log("after :",cTrait.description.expanded)
+		if (item.testUserPermission(game.user, 3)) {
+						const isExpanded = !!item.getFlag(mName, `kw_trait_expanded.${game.user.id}`);
+						item.setFlag(mName, `kw_trait_expanded.${game.user.id}`, !isExpanded);
+		} else if (item.testUserPermission(game.user, 2)) {
+						const isExpanded = !!game.user.getFlag(mName, `kw_trait_expanded.${item.id}`);
+						await game.user.setFlag(mName, `kw_trait_expanded.${item.id}`, !isExpanded);
+						this.render();
 		}
-		return;
-	}
+  }
 
 	_onAddTrait(evt) {
 		const dataset = evt.currentTarget.dataset;
