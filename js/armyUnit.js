@@ -245,6 +245,8 @@ function dropActor(itemInfo, armySheet) {
 	//set commander
 	const droppedActor = game.actors.get(itemInfo.id);
 
+console.log("drop :",droppedActor);
+
 	this.setFlag(mName, 'army.commander', droppedActor.data.name);
 
 	//Only set permissions when dragging PCs.
