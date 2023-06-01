@@ -236,15 +236,15 @@ Hooks.on("ready", function() {
 
 Hooks.on("dropActorSheetData", (actor, sheet, itemInfo) =>{
 	if(itemInfo.type === 'Actor') {
-		console.log("hookdrop :",itemInfo);
 		dropActor.call(actor, itemInfo, sheet);
 		return false;
 	}
 });
 
 function dropActor(itemInfo, armySheet) {
+	console.log("drop it:", itemInfo)
 	//set commander
-	const droppedActor = game.actors.get(itemInfo.id);
+	const droppedActor = game.actors.get(itemInfo.uuid);
 
 console.log("drop :",droppedActor);
 
