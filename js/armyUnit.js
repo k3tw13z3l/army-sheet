@@ -247,7 +247,7 @@ function dropActor(itemInfo, armySheet) {
 
 console.log("drop :",droppedActor);
 
-	this.setFlag(mName, 'army.commander', droppedActor.data.name);
+	this.setFlag(mName, 'army.commander', droppedActor.name);
 
 	//Only set permissions when dragging PCs.
 	if (droppedActor.type !== 'character') {
@@ -268,7 +268,7 @@ console.log("drop :",droppedActor);
 					.forEach(e => updatedPermissions[e[0]] = e[1]);
 
 	//Add owner of the dropped actor as the owner of the warfare unit
-	Object.entries(droppedActor.data.permission)
+	Object.entries(droppedActor.permission)
 					.filter(e => e[0] !== 'default' && !game.users.get(e[0])?.isGM && e[1] === OWNER)
 					.map(e => e[0])
 					.forEach(id => {
