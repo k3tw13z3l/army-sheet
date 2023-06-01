@@ -236,7 +236,7 @@ Hooks.on("ready", function() {
 
 Hooks.on("dropActorSheetData", (actor, sheet, itemInfo) =>{
 	if(itemInfo.type === 'Actor') {
-		console.log("hookdrop :",actor);
+		console.log("hookdrop :",itemInfo);
 		dropActor.call(actor, itemInfo, sheet);
 		return false;
 	}
