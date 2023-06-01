@@ -217,7 +217,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		if (!rmItem) {
 						$('.armyUnit-alert').removeClass('armyUnit-alert');
 		}
- }
+  }
 
   _onRollAttribute(evt) {
     this.actor.rollKWUnitAttribute(evt.currentTarget.dataset['kwRoll'], {event: evt});
@@ -233,6 +233,14 @@ Actors.registerSheet("dnd5e", ArmySheet, {
 Hooks.on("ready", function() {
   console.log("-=> Army Sheet v" + ArmySheet_Version + " <=-");
 });
+
+Hooks.on("dropActorSheetData", (avtor, sheet, ItemInfo) =>{
+	if(ItemInfo.type === 'Actor') {
+		dropActor.call(actor, itemInfo, sheet);
+		return false;
+	}
+});
+
 
 Handlebars.registerHelper('armyUnit-number-format', function (n, options) {
 	if (n == null) {
