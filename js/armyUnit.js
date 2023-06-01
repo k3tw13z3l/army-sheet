@@ -234,7 +234,7 @@ Hooks.on("ready", function() {
   console.log("-=> Army Sheet v" + ArmySheet_Version + " <=-");
 });
 
-Hooks.on("dropActorSheetData", (actor, sheet, ItemInfo) =>{
+Hooks.on("dropActorSheetData", (actor, sheet, itemInfo) =>{
 	if(ItemInfo.type === 'Actor') {
 		dropActor.call(actor, itemInfo, sheet);
 		return false;
