@@ -234,12 +234,50 @@ Hooks.on("ready", function() {
   console.log("-=> Army Sheet v" + ArmySheet_Version + " <=-");
 });
 
-Hooks.on("dropActorSheetData", (avtor, sheet, ItemInfo) =>{
+Hooks.on("dropActorSheetData", (actor, sheet, ItemInfo) =>{
 	if(ItemInfo.type === 'Actor') {
 		dropActor.call(actor, itemInfo, sheet);
 		return false;
 	}
 });
+
+function dropActor(itemInfo, armySheet) {
+	//set commander
+	const droppedActor = game.actors.get(itemInfo.id);
+
+	this.setFlag(mName, 'army.commander', droppedActor.data.name);
+
+	//Only set permissions when dragging PCs.
+	if (droppedActor.type !== 'character') {
+					return;
+	}
+
+	const existingPermissions = this.data.permission;
+	const updatedPermissions = {}
+
+	//Remove other owners (not GMs, default or observers)
+	Object.entries(existingPermissions)
+					.map(e => {
+									if (e[0] !== 'default' && !game.users.get(e[0])?.isGM && e[1] === OWNER) {
+													return [e[0], CONST.ENTITY_PERMISSIONS.NONE];
+									}
+									return e;
+					})
+					.forEach(e => updatedPermissions[e[0]] = e[1]);
+
+	//Add owner of the dropped actor as the owner of the warfare unit
+	Object.entries(droppedActor.data.permission)
+					.filter(e => e[0] !== 'default' && !game.users.get(e[0])?.isGM && e[1] === OWNER)
+					.map(e => e[0])
+					.forEach(id => {
+									updatedPermissions[id] = OWNER;
+					});
+
+	this.update({permission: updatedPermissions});
+
+	//set unit disposition to friendly if a pc is dropped
+	armySheet.token.update({disposition: 1});
+}
 
 
 Handlebars.registerHelper('armyUnit-number-format', function (n, options) {
