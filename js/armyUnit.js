@@ -236,6 +236,7 @@ Hooks.on("ready", function() {
 
 Hooks.on("dropActorSheetData", (actor, sheet, itemInfo) =>{
 	if(itemInfo.type === 'Actor') {
+		console.log("hookdrop :",actor);
 		dropActor.call(actor, itemInfo, sheet);
 		return false;
 	}
@@ -247,7 +248,7 @@ function dropActor(itemInfo, armySheet) {
 
 console.log("drop :",droppedActor);
 
-	this.setFlag(mName, 'army.commander', droppedActor.name);
+	this.setFlag(mName, 'army.commander', droppedActor.system.name);
 
 	//Only set permissions when dragging PCs.
 	if (droppedActor.type !== 'character') {
