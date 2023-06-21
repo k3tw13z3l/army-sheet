@@ -77,6 +77,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
     // if (!mycontext.actor.flags[mName]) {
 		//   mycontext.actor.flags[mName] = DEFAULT_UNIT_DATA;
 		// }
+		console.log("mycontext 0: ", mycontext.actor.flags[mName]);
 		mycontext.army = duplicate(this.actor.getFlag(mName, 'army') || DEFAULT_UNIT_DATA);
     console.log("mycontext 1: ", mycontext.actor.flags[mName].army);
 		mycontext.army = mycontext.actor.flags[mName].army;
