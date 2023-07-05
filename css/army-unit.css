@@ -33,7 +33,7 @@
 }
 
 .armyUnit input {
-  /* display: none; */
+  display: none;
   background: transparent;
   border: none;
   outline: none;
