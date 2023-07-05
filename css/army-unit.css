@@ -347,7 +347,9 @@ input.armyUnit-statbonus[type="number"] {
   z-index: 3;
   width: 59.16px;
   height: 59.16px;
-  position: static;
+  top: -83px;
+  left: 66px;
+  position: relative;
 }
 
 .armyUnit-tier-rhombus {
@@ -356,8 +358,6 @@ input.armyUnit-statbonus[type="number"] {
   border-style: solid;
   border-color: #000000;
   border-width: 5px;
-  top: -83px;
-  left: 66px;
   width: 52px;
   height: 52px;
   transform-origin: 0 0;
