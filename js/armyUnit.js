@@ -65,7 +65,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		options.classes.push('dnd5e actor npc army-sheet');
 		mergeObject(options, {
 			width: 748,
-			height: 641
+			height: 540
 		});
 		return options;
 	}
