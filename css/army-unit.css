@@ -319,7 +319,7 @@ input.armyUnit-statbonus[type="number"] {
   color: black;
   left: 34px;
   top: -97px;
-  font: 900 25px 'Roboto', sans-serif;
+  font: 600 23px 'Roboto', sans-serif;
   text-align: center;
   text-transform: uppercase;
   position: relative;
@@ -337,7 +337,7 @@ input.armyUnit-statbonus[type="number"] {
 }
 
 .armyUnit-lock {
-  top: -130px;
+  top: -137px;
   left: 97px;
   position: relative;
   z-index: 4;
@@ -347,7 +347,7 @@ input.armyUnit-statbonus[type="number"] {
   z-index: 3;
   width: 59.16px;
   height: 59.16px;
-  top: -83px;
+  top: -95px;
   left: 66px;
   position: relative;
 }
@@ -366,8 +366,8 @@ input.armyUnit-statbonus[type="number"] {
 
 .armyUnit-tier-text {
   color: #dcdddf;
-  left: 75px;
-  top: -148px;
+  left: 10px;
+  top: -65px;
   font: 400 16px 'Roboto Slab', sans-serif;
   text-align: center;
   text-transform: uppercase;
@@ -387,7 +387,7 @@ input.armyUnit-statbonus[type="number"] {
 
 .armyUnit-movement {
   position: relative;
-  top: -189px;
+  top: -205px;
   left: 132px;
   width: 68px;
   height: 88px;
@@ -395,7 +395,6 @@ input.armyUnit-statbonus[type="number"] {
   transform-origin: 0 0;
   transform: rotate(0deg) scale(0.75, 0.75);
 }
-
 
 .armyUnit-movement div {
   position: relative;
