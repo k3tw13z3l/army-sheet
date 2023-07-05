@@ -198,6 +198,7 @@
 
 .onetraitbox .trait-description.expanded {
   display: inline-block;
+  background: rgba(50,50,50,0.3);
 }
 
 .onetraitbox .trait-description {
