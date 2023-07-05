@@ -304,7 +304,7 @@ input.armyUnit-statbonus[type="number"] {
   z-index: 4;
   width: 59.16px;
   height: 59.16px;
-  position: static;
+  position: relative;
   top: -97px;
   left: 39px;
 }
