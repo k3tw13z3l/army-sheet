@@ -32,10 +32,6 @@
   position: fixed;
 }
 
-.armyUnit-name form input[type="number"] {
-  display: none;
-}
-
 .armyUnit-name form input[type="text"] {
   color: blanchedalmond;
   position: relative;
