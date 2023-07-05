@@ -32,14 +32,6 @@
   position: fixed;
 }
 
-.armyUnit form input {
-  display: none;
-  background: transparent;
-  border: none;
-  height: unset;
-  outline: none;
-}
-
 .armyUnit-name input[type="text"] {
   color: blanchedalmond;
   position: relative;
@@ -50,6 +42,7 @@
   text-align: left;
   font: 900 35px 'Roboto Condensed', sans-serif;
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
+  display: none;
 }
 
 .armyUnit form input.armyUnit-stat {
