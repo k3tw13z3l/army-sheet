@@ -162,6 +162,11 @@
   max-height: 60px;
 }
 
+.armyUnit-config {
+  top: -490px;
+  left: 550px;
+}
+
 .armyUnit-traitbox {
   color: white;
   position: relative;
