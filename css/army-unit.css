@@ -47,6 +47,7 @@
 
 .armyUnit form input.armyUnit-stat {
   text-align: center;
+  display:block;
 }
 
 .armyUnit form.armyUnit-config.flexconf input {
