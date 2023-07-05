@@ -38,6 +38,9 @@
   border: none;
   outline: none;
 }
+.armyUnit.armyUnit-config span{
+  display: none;
+}
 
 .armyUnit.armyUnit-config input {
   display: block;
