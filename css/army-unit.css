@@ -21,7 +21,7 @@
   padding: 17px;
   height: 534px;
   width: 734px;
-  margin: 30px auto;
+  margin: 0px auto;
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
   overflow: hidden;
@@ -305,6 +305,8 @@ input.armyUnit-statbonus[type="number"] {
   width: 59.16px;
   height: 59.16px;
   position: static;
+  top: -97px;
+  left: 39px;
 }
 
 .armyUnit-dam-rhombus {
@@ -313,8 +315,6 @@ input.armyUnit-statbonus[type="number"] {
   border-style: solid;
   border-color: #000000;
   border-width: 5px;
-  top: -97px;
-  left: 39px;
   width: 90px;
   height: 90px;
   transform-origin: 0 0;
