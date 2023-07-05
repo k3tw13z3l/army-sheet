@@ -39,7 +39,7 @@
   outline: none;
 }
 
-.armyUnit armyUnit-config input {
+.armyUnit.armyUnit-config input {
   display: block;
 }
 
