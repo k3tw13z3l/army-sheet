@@ -32,7 +32,7 @@
   position: fixed;
 }
 
-.armyUnit form input[type="text"] {
+/* .armyUnit form input[type="text"] {
   color: blanchedalmond;
   position: relative;
   top: auto;
@@ -43,7 +43,7 @@
   font: 900 35px 'Roboto Condensed', sans-serif;
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
   display: none;
-}
+} */
 
 .armyUnit form input.armyUnit-stat {
   text-align: center;
