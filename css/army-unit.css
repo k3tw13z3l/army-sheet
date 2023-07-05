@@ -38,7 +38,7 @@
   border: none;
   outline: none;
 }
-.armyUnit.armyUnit-config span{
+.armyUnit.armyUnit-config.armyUnit-name span{
   display: none;
 }
 
