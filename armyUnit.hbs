@@ -24,11 +24,7 @@
     <div class="armyUnit-tokens">
       <img src="/modules/army-sheet/Images/{{actor.flags.army-sheet.army.ancestry}}.png" class="armyUnitsheetimg armyUnit-token" width="50%"><img src="/modules/army-sheet/Images/{{actor.flags.army-sheet.army.type}}.png" class="armyUnitsheetimg  armyUnit-token" width="50%">
     </div>
-    <div class="armyUnit-lock">
-      {{#if editable}}
-      <a class="armyUnit-config"><i class="fas fa-cog"></i></a>
-      {{/if}}
-    </div>
+
     <div class="armyUnit-traitbox">
        <span class="armyUnit-addTraits">
         <a class="armyUnit-addTrait">+</a>
@@ -88,6 +84,11 @@
             dam
             <div>2</div>
           </div>
+        </div>
+        <div class="armyUnit-lock">
+          {{#if editable}}
+          <a class="armyUnit-config"><i class="fas fa-cog"></i></a>
+          {{/if}}
         </div>
         <div class="armyUnit-tier">
           <div class="armyUnit-tier-rhombus"></div>
