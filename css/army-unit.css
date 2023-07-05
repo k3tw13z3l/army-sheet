@@ -103,7 +103,7 @@
 }
 
 .armyUnit-text span {
-  color: #ffffff;
+  color: white;
   font: 500 25px 'Roboto', sans-serif;
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
   text-transform: capitalize;
@@ -111,7 +111,7 @@
 }
 
 .armyUnit-text input {
-  color: #ffffff;
+  color: white;
   border: solid;
   text-align: left;
   font: 500 25px 'Roboto', sans-serif;
@@ -135,7 +135,7 @@
   top: -513px;
   left: 573px;
   z-index: 3;
-  color: #000;
+  color: black;
   width: 100px;
   text-align: center;
 }
@@ -145,7 +145,7 @@
 }
 
 .armyUnit-hp span.hitpoints {
-  color: #000;
+  color: black;
   font: 900 40px 'Roboto', sans-serif;
 }
 
@@ -157,7 +157,7 @@
   top: -490px;
   left: 550px;
   z-index: 3;
-  color: #000;
+  color: black;
   width: 120px;
   text-align: center;
 }
@@ -240,7 +240,7 @@
   z-index: 3;
   top: -550px;
   left: 10px;
-  background: blanchedalmond;
+  background: ghostwhite;
 }
 
 .armyUnit-statblock {
@@ -309,7 +309,7 @@ input.armyUnit-statbonus[type="number"] {
 
 .armyUnit-dam-rhombus {
   position: relative;
-  background: blanchedalmond;
+  background: ghostwhite;
   border-style: solid;
   border-color: black;
   border-width: 5px;
@@ -358,7 +358,7 @@ input.armyUnit-statbonus[type="number"] {
 
 .armyUnit-tier-rhombus {
   position: relative;
-  background: blanchedalmond;
+  background: ghostwhite;
   border-style: solid;
   border-color: black;
   border-width: 5px;
@@ -369,7 +369,7 @@ input.armyUnit-statbonus[type="number"] {
 }
 
 .armyUnit-tier-text {
-  color: lightgray;
+  color: #b3a590;
   left: 10px;
   top: -65px;
   font: 400 16px 'Roboto Slab', sans-serif;
