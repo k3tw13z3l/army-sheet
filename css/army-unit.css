@@ -78,6 +78,7 @@
   padding: 5px;
   font: 900 35px 'Roboto Condensed';
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
+  display: block;
 }
 
 .armyUnit-name input[type="text"] {
