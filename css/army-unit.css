@@ -54,7 +54,7 @@
   text-align: center;
 }
 
-.armyUnit form.armyUnit-config input {
+.armyUnit form.armyUnit-config.flexconf input {
   display: block;
 }
 
