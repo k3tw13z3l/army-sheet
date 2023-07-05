@@ -1,12 +1,12 @@
-<form class="{{cssClass}} flexcol" autocomplete="off">
+<form class="{{cssClass}} {{#if army-sheet.sheet.config}}army-config{{/if}} flexcol" autocomplete="off">
   <div class="armyUnit">
     <div class="armyUnit-art">
       <img class="armyUnit-artwork" src="{{actor.img}}" alt="artwork" data-edit="img" />
     </div>
-    <div class="armyUnit-name">
-      {{!-- <span>{{actor.name}}</span> --}}
+    <label class="armyUnit-name">
+      <span>{{actor.name}}</span>
       <input class="armyUnit-name" type="text" data-dtype="String" name="name" value="{{actor.name}}" placeholder="UnitName">
-    </div>
+    </label>
     {{log actor}}
     <div class="armyUnit-text">
         <span>{{actor.flags.army-sheet.army.experience}}</span>&nbsp;
@@ -49,16 +49,16 @@
     </div>
     <div class="armyUnit-stats">
       <div class="armyUnit-statblock">
-        {{#if actor.flags.army-sheet.army.stats.attack.bonus}}
+        <label>
           <span class="armyUnit-statbonus" id="attack-stat">
              {{armyUnit-number-format  actor.flags.army-sheet.army.stats.attack.bonus sign=true decimal=0}}
           </span>
-        {{/if}}
-        <input id="attack-stat" type="number" class="armyUnit-statbonus"
-          data-dtype="Number" placeholder="ATK"
-          name="{{actor.flags.army-sheet.army.stats.attack.bonus}}"
-          value="{{actor.flags.army-sheet.army.stats.attack.bonus}}"
-        />
+          <input id="attack-stat" type="number" class="armyUnit-statbonus"
+            data-dtype="Number" placeholder="ATK"
+            name="{{actor.flags.army-sheet.army.stats.attack.bonus}}"
+            value="{{actor.flags.army-sheet.army.stats.attack.bonus}}"
+          />
+        </label>
         {{#if stat.advantage}}<span class="armyUnit-advantage">+</span>{{/if}}
         {{#if stat.disadvantage}}<span class="armyUnit-disadvantage">-</span>{{/if}}
         <span class="armyUnit-statname">ATK</span>

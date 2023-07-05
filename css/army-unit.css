@@ -32,11 +32,23 @@
   position: fixed;
 }
 
-.armyUnit input {
-  /* display: none; */
+.armyUnit form input {
+  display: none;
   background: transparent;
   border: none;
   outline: none;
+}
+
+.armyUnit form input.armyUnit-stat {
+  text-align: center;
+}
+
+.armyUnit form.armyUnit-config input {
+  display: block;
+}
+
+.armyUnit form.armyUnit-config label span {
+  display: none;
 }
 
 .armyUnitsheetimg {
