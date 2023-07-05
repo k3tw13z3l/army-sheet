@@ -16,6 +16,10 @@
         src: url('../fonts/Roboto-Slab-Regular.woff2') format('woff2');
 }
 
+.dnd5e.sheet.actor.npc {
+  min-height: auto;
+}
+
 .armyUnit {
   background: black;
   padding: 17px;
