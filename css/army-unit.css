@@ -319,17 +319,10 @@ input.armyUnit-statbonus[type="number"] {
   color: black;
   left: 34px;
   top: -97px;
-  font: 500 28px 'Roboto', sans-serif;
+  font: 900 25px 'Roboto', sans-serif;
   text-align: center;
   text-transform: uppercase;
   position: relative;
-}
-
-.armyUnit-lock {
-  top: -130px;
-  left: 97px;
-  position: relative;
-  z-index: 4;
 }
 
 .armyUnit-dam-text div {
@@ -337,10 +330,17 @@ input.armyUnit-statbonus[type="number"] {
   top: -74px;
   color: #000000;
   /* text-align: center; */
-  font: 900 25px 'Roboto', sans-serif;
+  font: 600 48px 'Roboto', sans-serif;
   /* display: flex;
   align-items: center;
   justify-content: center */
+}
+
+.armyUnit-lock {
+  top: -130px;
+  left: 97px;
+  position: relative;
+  z-index: 4;
 }
 
 .armyUnit-tier {
