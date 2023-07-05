@@ -32,30 +32,11 @@
   position: fixed;
 }
 
-input.armyUnit-name [type="text"] {
-  color: blanchedalmond;
-  position: relative;
-  top: auto;
-  left: auto;
-  opacity: 1;
-  padding: 5px;
-  text-align: left;
-  font: 900 35px 'Roboto Condensed', sans-serif;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0);
-  display: none;
-}
-
-input.armyUnit-stat {
-  text-align: center;
-  display:block;
-}
-
-.armyUnit form.armyUnit-config.flexconf input {
-  display: block;
-}
-
-label.span.armyUnit-name {
-  display: none;
+.armyUnit input {
+  /* display: none; */
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
 .armyUnitsheetimg {
@@ -78,7 +59,7 @@ label.span.armyUnit-name {
   width:100%;
 }
 
-label.armyUnit-name {
+.armyUnit-name {
   padding: 5px;
   background: rgba(200, 200, 200, 0.2);
   border-radius: 4px/20px;
@@ -88,7 +69,6 @@ label.armyUnit-name {
   left: 17px;
   right: 0;
   z-index: 2;
-  display: block;
 }
 
 .armyUnit-name span {
@@ -100,11 +80,23 @@ label.armyUnit-name {
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
 }
 
+.armyUnit-name input[type="text"] {
+  color: blanchedalmond;
+  position: relative;
+  top: auto;
+  left: auto;
+  opacity: 1;
+  padding: 5px;
+  text-align: left;
+  font: 900 35px 'Roboto Condensed', sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0);
+}
+
 .armyUnit-text {
   padding: 3px;
   position: relative;
   width: 530px;
-  top: -381px;
+  top: -383px;
   left: 17px;
   right: 0;
   z-index: 2;
@@ -140,7 +132,7 @@ label.armyUnit-name {
   border-radius: 20px/20px;
   background: rgba(230, 230, 230, 0.4);
   position: relative;
-  top: -500px;
+  top: -513px;
   left: 573px;
   z-index: 3;
   color: black;
@@ -162,7 +154,7 @@ label.armyUnit-name {
   padding: 5px;
   background: rgba(200, 200, 200, 0.2);
   position: relative;
-  top: -478;
+  top: -490px;
   left: 550px;
   z-index: 3;
   color: black;
@@ -177,7 +169,7 @@ label.armyUnit-name {
 .armyUnit-traitbox {
   color: white;
   position: relative;
-  top: -554px;
+  top: -520px;
   left: 17px;
   z-index: 2;
   height: 220px;
@@ -247,7 +239,7 @@ label.armyUnit-name {
   padding: 7px;
   border-style: solid;
   z-index: 3;
-  top: -540px;
+  top: -550px;
   left: 10px;
   background: ghostwhite;
 }
