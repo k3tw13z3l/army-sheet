@@ -54,7 +54,7 @@ input.armyUnit-stat {
   display: block;
 }
 
-.armyUnit form.armyUnit-config label span {
+label.span.armyUnit-name {
   display: none;
 }
 
