@@ -32,7 +32,7 @@
   position: fixed;
 }
 
-.armyyUnit-name form input[type="number"] {
+.armyUnit-name form input[type="number"] {
   display: none;
 }
 
