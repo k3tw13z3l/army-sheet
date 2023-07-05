@@ -75,6 +75,7 @@
   color: blanchedalmond;
   opacity: 1;
   text-align: left;
+  position: relative;
   padding: 5px;
   font: 900 35px 'Roboto Condensed';
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
