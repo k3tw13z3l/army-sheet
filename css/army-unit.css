@@ -40,6 +40,18 @@
   outline: none;
 }
 
+.armyUnit-name input[type="text"] {
+  color: blanchedalmond;
+  position: relative;
+  top: auto;
+  left: auto;
+  opacity: 1;
+  padding: 5px;
+  text-align: left;
+  font: 900 35px 'Roboto Condensed', sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0);
+}
+
 .armyUnit form input.armyUnit-stat {
   text-align: center;
 }
@@ -72,7 +84,7 @@
   width:100%;
 }
 
-.armyUnit-name {
+label.armyUnit-name {
   padding: 5px;
   background: rgba(200, 200, 200, 0.2);
   border-radius: 4px/20px;
@@ -82,6 +94,7 @@
   left: 17px;
   right: 0;
   z-index: 2;
+  display: block;
 }
 
 .armyUnit-name span {
@@ -90,18 +103,6 @@
   text-align: left;
   padding: 5px;
   font: 900 35px 'Roboto Condensed';
-  text-shadow: 2px 2px 5px rgba(0, 0, 0);
-}
-
-.armyUnit-name input[type="text"] {
-  color: blanchedalmond;
-  position: relative;
-  top: auto;
-  left: auto;
-  opacity: 1;
-  padding: 5px;
-  text-align: left;
-  font: 900 35px 'Roboto Condensed', sans-serif;
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
 }
 
