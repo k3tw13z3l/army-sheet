@@ -36,6 +36,7 @@
   display: none;
   background: transparent;
   border: none;
+  height: unset;
   outline: none;
 }
 
