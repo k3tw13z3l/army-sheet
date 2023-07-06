@@ -299,7 +299,7 @@ input.armyUnit-statbonus[type="number"] {
 
 .armyUnit-attack {
   position: relative;
-  top: 3px;
+  top: 5px;
   left: 10px;
   width: 88px;
   height: 88px;
@@ -398,19 +398,16 @@ input.armyUnit-statbonus[type="number"] {
 
 .armyUnit-tier-text div {
   position: relative;
-  top: -27px;
+  top: -30px;
+  left: -2px;
   color: black;
-  /* text-align: center; */
   font: 500 28px 'Roboto Slab', sans-serif;
-  /* display: flex;
-  align-items: center;
-  justify-content: center */
 }
 
 .armyUnit-movement {
   position: relative;
-  top: -205px;
-  left: 132px;
+  top: -191px;
+  left: 136px;
   width: 68px;
   height: 88px;
   z-index: 3;
@@ -423,5 +420,5 @@ input.armyUnit-statbonus[type="number"] {
   color: black;
   text-align: center;
   font: 900 36px 'Roboto', sans-serif;
-  top: -60px;
+  top: -53px;
 }
