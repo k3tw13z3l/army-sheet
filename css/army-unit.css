@@ -20,6 +20,10 @@
   min-height: auto;
 }
 
+* {
+  outline: 1px solid red;
+}
+
 .armyUnit {
   background: black;
   padding: 17px;
@@ -38,7 +42,7 @@
   border: none;
   outline: none;
 }
-.armyUnit.armyUnit-config armyUnit-name.span {
+.armyUnit.armyUnit-config span {
   display: none;
 }
 
