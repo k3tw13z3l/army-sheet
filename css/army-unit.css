@@ -16,12 +16,12 @@
         src: url('../fonts/Roboto-Slab-Regular.woff2') format('woff2');
 }
 
+/* * {
+  outline: 1px solid red;
+} */
+
 .dnd5e.sheet.actor.npc {
   min-height: auto;
-}
-
-* {
-  outline: 1px solid red;
 }
 
 .armyUnit {
@@ -196,6 +196,7 @@
   justify-content: flex-end;
   gap: 5px;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .onetraitbox {
