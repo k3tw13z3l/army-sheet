@@ -42,7 +42,7 @@
   border: none;
   outline: none;
 }
-.armyUnit.armyUnit-config span {
+.armyUnit.armyUnit-config armyUnit-name span {
   display: none;
 }
 
@@ -118,7 +118,7 @@
   z-index: 2;
 }
 
-.armyUnit-text span {
+.armyUnit-text div {
   color: white;
   font: 500 25px 'Roboto', sans-serif;
   text-shadow: 2px 2px 5px rgba(0, 0, 0);
