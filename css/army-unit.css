@@ -76,7 +76,7 @@
   border-radius: 4px/20px;
   width: 530px;
   position: relative;
-  top: -383px;
+  top: -386px;
   left: 17px;
   z-index: 2;
 }
@@ -171,7 +171,7 @@
   background: rgba(200, 200, 200, 0.2);
   position: relative;
   top: -490px;
-  left: 550px;
+  left: 553px;
   z-index: 3;
   color: black;
   width: 120px;
@@ -185,10 +185,10 @@
 .armyUnit-traitbox {
   color: white;
   position: relative;
-  top: -520px;
+  top: -537px;
   left: 17px;
   z-index: 2;
-  height: 220px;
+  height: 242px;
   width: 300px;
   display: flex;
   padding: 3px;
@@ -232,8 +232,8 @@
   color: black;
   position: relative;
   width: 250px;
-  top: -570px;
-  left: 424px;
+  top: -586px;
+  left: 423px;
 }
 
 .armyUnit-commander span.commander {
@@ -255,7 +255,7 @@
   padding: 7px;
   border-style: solid;
   z-index: 3;
-  top: -550px;
+  top: -571px;
   left: 10px;
   background: ghostwhite;
 }
