@@ -91,10 +91,9 @@
   display: block;
 }
 
-.armyUnit-name.armyUnit-config span {
+.armyUnit-config span {
   display: none;
 }
-
 
 .armyUnit-name input[type="text"] {
   color: blanchedalmond;
