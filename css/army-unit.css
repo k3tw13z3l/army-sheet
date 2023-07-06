@@ -275,7 +275,11 @@
   font: 900 25px 'Roboto', sans-serif;
 }
 
-input.armyUnit-statbonus[type="number"] {
+.armyUnit-config .armyUnit-statbonus span {
+  display: none;
+}
+
+.armyUnit-config input.armyUnit-statbonus[type="number"] {
   font: 900 25px 'Roboto', sans-serif;
   top: auto;
   left: auto;
