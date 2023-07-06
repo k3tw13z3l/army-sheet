@@ -73,7 +73,14 @@
         <span class="armyUnit-statname">POW</span>
       </div>
       <div class="armyUnit-statblock">
-        <span class="armyUnit-statbonus armyUnit-rollable" id="command-stat">+4</span>
+        <span class="armyUnit-statbonus armyUnit-rollable" id="command-stat">
+          {{armyUnit-number-format actor.flags.army-sheet.army.stats.command.bonus sign=true decimal=0}}
+        </span>
+        <input id="command-stat" type="number" class="armyUnit-statbonus"
+          data-dtype="Number" placeholder="0"
+          name="{{actor.flags.army-sheet.army.stats.command.bonus}}"
+          value="{{actor.flags.army-sheet.army.stats.command.bonus}}"
+        />
         <span class="armyUnit-statname">COM</span>
       </div>
       <div class="armyUnit-statspacer">
