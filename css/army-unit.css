@@ -275,7 +275,7 @@
   font: 900 25px 'Roboto', sans-serif;
 }
 
-.armyUnit-config .armyUnit-statbonus span {
+.armyUnit-config span.armyUnit-statbonus {
   display: none;
 }
 
