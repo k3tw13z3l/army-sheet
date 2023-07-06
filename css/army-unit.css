@@ -91,7 +91,7 @@
   display: block;
 }
 
-.armyUnit-config span {
+.armyUnit-config .armyUnit-name span {
   display: none;
 }
 
