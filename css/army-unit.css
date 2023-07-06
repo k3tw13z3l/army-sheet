@@ -339,7 +339,7 @@ input.armyUnit-statbonus[type="number"] {
 .armyUnit-dam-text {
   color: black;
   left: 34px;
-  top: -140px;
+  top: -157px;
   font: 600 23px 'Roboto', sans-serif;
   text-align: center;
   text-transform: uppercase;
@@ -358,17 +358,17 @@ input.armyUnit-statbonus[type="number"] {
 }
 
 .armyUnit-lock {
-  top: -142px;
+  top: -159px;
   left: 58px;
   position: relative;
   z-index: 4;
 }
 
 .armyUnit-tier {
-  z-index: 3;
+  z-index: 4;
   width: 59.16px;
   height: 59.16px;
-  top: -95px;
+  top: -87px;
   left: 66px;
   position: relative;
 }
@@ -386,7 +386,7 @@ input.armyUnit-statbonus[type="number"] {
 }
 
 .armyUnit-tier-text {
-  color: #b3a590;
+  color: #aeaeb3;
   left: 10px;
   top: -65px;
   font: 400 16px 'Roboto Slab', sans-serif;
