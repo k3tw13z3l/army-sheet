@@ -9,8 +9,8 @@
     </div>
     {{log actor}}
     <div class="armyUnit-text">
-        <div>{{actor.flags.army-sheet.army.experience}} {{flags.army-sheet.army.equipment}}</div>
-        <div>{{actor.flags.army-sheet.army.ancestry}} {{flags.army-sheet.army.type}}</div>
+        <div>{{actor.flags.army-sheet.army.experience}} {{actor.flags.army-sheet.army.equipment}}</div>
+        <div>{{actor.flags.army-sheet.army.ancestry}} {{actor.flags.army-sheet.army.type}}</div>
     </div>
     {{!-- <div class="armyUnit-bio">
         <i class="fa-solid fa-scroll"></i>
@@ -53,7 +53,7 @@
         <input id="attack-stat" type="number" class="armyUnit-statbonus"
           data-dtype="Number" placeholder="0"
           name="{{actor.flags.army-sheet.army.stats.attack.bonus}}"
-          value="{{actor.flags.army-sheet.army.stats.attack.bonus}}"
+          value="{{army-sheet.army.stats.attack.bonus}}"
         />
         {{#if stat.advantage}}<span class="armyUnit-advantage">+</span>{{/if}}
         {{#if stat.disadvantage}}<span class="armyUnit-disadvantage">-</span>{{/if}}
