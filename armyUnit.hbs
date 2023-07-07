@@ -115,7 +115,7 @@
       </div>
       <div class="armyUnit-statblock">
         <span class="armyUnit-statvalue" id="defense-stat">
-          {{armyUnit-number-format actor.flags.army-sheet.army.stats.defense.value decimal=0}}
+          {{armyUnit-number-format actor.flags.army-sheet.army.stats.defense.value sign=false decimal=0}}
         </span>
         <input id="defense-stat" type="number" class="armyUnit-statvalue"
           data-dtype="Number" placeholder="0"
@@ -126,7 +126,7 @@
       </div>
       <div class="armyUnit-statblock">
         <span class="armyUnit-statvalue" id="toughness-stat">
-          {{armyUnit-number-format actor.flags.army-sheet.army.stats.toughness.value decimal=0}}
+          {{armyUnit-number-format actor.flags.army-sheet.army.stats.toughness.value sign=false decimal=0}}
         </span>
         <input id="toughness-stat" type="number" class="armyUnit-statvalue"
           data-dtype="Number" placeholder="0"
