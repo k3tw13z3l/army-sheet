@@ -138,6 +138,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		});
     html.find(".traitname").click(this._onTraitNameClicked.bind(this));
 		html.find('armyUnit-roll').click(this._onRollAttribute.bind(this));
+		html.find('armyUnit-lock').click(this._onConfigClicked.bind(this));
   }
 
 	_traitIsExpanded(trait) {
@@ -178,6 +179,11 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 						this.render();
 		}
   }
+
+  asyn _onConfigClicked(evt) {
+		const currentStatus = !!this.actor.getFlag(mName, 'sheet.config');
+		this.actor.setFlag(mName, 'sheet.config', !currentStatus);
+	}
 
 	_onAddTrait(evt) {
 		const dataset = evt.currentTarget.dataset;
