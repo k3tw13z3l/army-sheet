@@ -80,7 +80,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
     mycontext.army = duplicate(this.actor.flags[mName] || {});
 
 		console.log("mycontext 0: ", mycontext.actor.flags[mName]);
-		console.log("mycontext 1: ", mycontext.actor.flags[mName].army);
+		// console.log("mycontext 1: ", mycontext.actor.flags[mName].army);
 		// mycontext.army = mycontext.actor.flags[mName].army;
 		console.log("mycontext 2: ", mycontext.army);
 
