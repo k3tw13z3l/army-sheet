@@ -113,13 +113,40 @@
           <div>1</div>
         </div>
       </div>
-      <div class="armyUnit-statblock">
-        <span class="armyUnit-statvalue" id="defense-stat">15</span>
+     <div class="armyUnit-statblock">
+        <span class="armyUnit-statvalue" id="defense-stat">
+          {{armyUnit-number-format actor.flags.army-sheet.army.stats.defense.value decimal=0}}
+        </span>
+        <input id="defense-stat" type="number" class="armyUnit-statvalue"
+          data-dtype="Number" placeholder="0"
+          name="{{actor.flags.army-sheet.army.stats.defense.value}}"
+          value="{{actor.flags.army-sheet.army.stats.defense.value}}"
+        />
         <span class="armyUnit-statname">DEF</span>
       </div>
       <div class="armyUnit-statblock">
-        <span class="armyUnit-statvalue" id="toughness-stat">16</span>
+        <span class="armyUnit-statvalue" id="toughness-stat">
+          {{armyUnit-number-format actor.flags.army-sheet.army.stats.toughness.value decimal=0}}
+        </span>
+        <input id="toughness-stat" type="number" class="armyUnit-statvalue"
+          data-dtype="Number" placeholder="0"
+          name="{{actor.flags.army-sheet.army.stats.defense.value}}"
+          value="{{actor.flags.army-sheet.army.stats.defense.value}}"
+        />
         <span class="armyUnit-statname">TOU</span>
+      </div>
+      <div class="armyUnit-statblock">
+        <span class="armyUnit-statbonus armyUnit-rollable" id="morale-stat">
+          {{armyUnit-number-format  actor.flags.army-sheet.army.stats.morale.bonus sign=true decimal=0}}
+        </span>
+        <input id="morale-stat" type="number" class="armyUnit-statbonus"
+          data-dtype="Number" placeholder="0"
+          name="{{actor.flags.army-sheet.army.stats.morale.bonus}}"
+          value="{{actor.flags.army-sheet.army.stats.morale.bonus}}"
+        />
+        {{#if stat.advantage}}<span class="armyUnit-advantage">+</span>{{/if}}
+        {{#if stat.disadvantage}}<span class="armyUnit-disadvantage">-</span>{{/if}}
+        <span class="armyUnit-statname">ATK</span>
       </div>
       <div class="armyUnit-statblock">
         <span class="armyUnit-statvalue" id="morale-stat">+3</span>
