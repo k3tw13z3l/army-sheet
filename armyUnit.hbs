@@ -86,13 +86,13 @@
       <div class="armyUnit-statspacer">
         <div class="armyUnit-attack">
           <img class="armyUnitsheetimg" src="/modules/army-sheet/Images/attack-sword.png">
-          <div>2x</div>
+          <div>{{army.numberOfAttacks}}x</div>
         </div>
         <div class="armyUnit-dam">
           <div class="armyUnit-dam-rhombus"></div>
 
           <div class="armyUnit-dam-text">
-            <div>2</div>
+            <div>{{army.damage}}</div>
             dam
           </div>
           <div class="armyUnit-lock">
@@ -105,7 +105,7 @@
           <div class="armyUnit-tier-rhombus"></div>
           <div class="armyUnit-tier-text">
             tier
-            <div>iv</div>
+            <div>{{army.tier}}</div>
           </div>
         </div>
         <div class="armyUnit-movement">
