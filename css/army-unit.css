@@ -275,7 +275,15 @@
   font: 900 25px 'Roboto', sans-serif;
 }
 
+.armyUnit-statvalue {
+  font: 900 25px 'Roboto', sans-serif;
+}
+
 .armyUnit-config span.armyUnit-statbonus {
+  display: none;
+}
+
+.armyUnit-config span.armyUnit-statvalue {
   display: none;
 }
 
@@ -285,11 +293,13 @@
   left: auto;
 }
 
-.armyUnit-statname {
+.armyUnit-config input.armyUnit-statvalue[type="number"] {
   font: 900 25px 'Roboto', sans-serif;
+  top: auto;
+  left: auto;
 }
 
-.armyUnit-statvalue {
+.armyUnit-statname {
   font: 900 25px 'Roboto', sans-serif;
 }
 
