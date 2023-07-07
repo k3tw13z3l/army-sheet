@@ -180,7 +180,7 @@ class ArmySheet extends dnd5e.applications.actor.ActorSheet5eNPC {
 		}
   }
 
-  asyn _onConfigClicked(evt) {
+  async _onConfigClicked(evt) {
 		const currentStatus = !!this.actor.getFlag(mName, 'sheet.config');
 		this.actor.setFlag(mName, 'sheet.config', !currentStatus);
 	}
